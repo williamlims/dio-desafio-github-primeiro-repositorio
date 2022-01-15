@@ -1,0 +1,216 @@
+TRADICIONAL
+Só permite que o projeto avance quando uma fase está inteiramente completa.
+############################################################################
+Escopo definido na fase inicial do projeto (Preditivo).
+Projeto é controlado por fases e marcos.
+Cliente só vê o software funcionando na fase final do projeto.
+Resistência a Mudanças.
+
+ÁGIL
+Software construído por parte (incremental) e cada parte executa-se em um ciclo (iterativo)
+############################################################################
+Escopo definido ao longo do Projeto (Adaptativo).
+Projeto é controlado por funcionalidades entregues.
+Cliente pode ver parte do software funcionando na parte inicial do projeto.
+Mudanças constantes de acordo com feedbacks contínuos.
+
+
+Em projetos tradicionais (waterfall), você corre o risco de descobrir
+que estava errado depois de meses. Com o SCRUM, você descobre que estava
+errado em no máximo 30 dias.
+
+O que é ser Ágil?
+* Ágil é diferente de Rápido.
+* Rapides (mudança) e desembaraço;
+* Fazer coisas complexas de forma simples;
+* Equipe comprometida com os objetivos;
+* Maior valor para o cliente.
+* Ter capacidade de responder rapidamente a mudanças.
+
+SCRUM
+* SCRUM é um dos frameworks de gerenciamento de projetos ágeis;
+* Projetos usando equipes pequenas e multidiciplinares produzem os melhores resultados.
+
+PILARES DO SCRUM
+* Transparência
+* Adaptação
+* Inspeção
+
+* Conversar mais e escrever menos;
+* Demonstrar o software constantemente aos usuários e obter feedbacks constantes;
+* Requisitos mudam ao longo do tempo;
+* Aprender progressivamente com o uso do software.
+
+RAZÕES PARA ADOTAR O SCRUM
+* Desenvolvimento e entregue em partes menores (2 a 4 semanas), com constante feedback dos usuários;
+* Melhor gerenciamento de riscos; (Redução de incertezas)
+* Compromentimento, motivação e transparência da equipe. (Daily Meeting)
+* Maior valor para o negócio. (priorização do backlog)
+* Usuários envolvidos durante todo o ciclo
+* Aplicação das Lições Aprendidas. (melhoria contínua)
+
+CARACTERÍSTICAS DO TIME SCRUM
+* Equipes capazes de se auto-organizarem;
+* As tarefas são do time e todos são responsáveis;
+* Forte comprometimento com os resultados.
+
+
+POR QUE AS STARTUPS UTILIZAM FRAMEWORK ÁGIL?
+* MINIMUM VIABLE PRODUCT
+
+PAPEIS NO SCRUM
+* Product Owner (PO)
+* Scrum Master (SM)
+* Time de Desenvolvimento (DEV)
+
+3 a 9 pessoas
+
+PRODUCT OWNER
+* Representante da área de Negócios;
+* PO não é um comitê;
+* Define as funcionalidades do software (Product Backlog);
+* Prioriza as funcionalidades de acordo com o valor do negócio;
+* Garante que o time de desenvolvimento entenda os itens do Backlog no nível necessário
+
+SCRUM MASTER
+* Garantir o uso correto do SCRUM
+* SCRUM Master não é gerente de Projetos
+* Age como facilitador
+* Auxilia o Product Owner no planejamento e estimativas do backlog
+* Auxilia a equipe a remover impedimentos
+* Treina o time em autogerenciamento e interdisciplinaridade
+
+TIME DE DESENVOLVIMENTO
+* Possui habilidades suficientes para desenvolver, testar ,criar e desenhar, ou seja,
+  tudo que for necessário para entregar o software funcionando.
+
+
+CERIMÔNIAS DO SCRUM
+
+TIME BOX
+* Tempo máximo para fazer uma cerimônia ou sprint
+
+SPRINT
+* corrida, arrancada
+* é o principal evento do SCRUM
+* Duração de 1 sprint: 30 dias corridos
+
+COMPOSIÇÃO DE UMA SPRINT:
+* planejamento da sprint
+* reuniões diárias (daily meeting) 15 minutos
+* revisão da sprint (review)
+* retrospectiva da sprint
+
+PLANEJAMENTO DA SPRINT
+* Participantes: PO, DEVs, SM
+* duração reunião: 8 horas (primeiras 4 horas obj sobre o que fazer, outras 4 horas como fazer)
+
+FERRAMENTAS
+* Planning Poker (definir as estatisticas e tarefas)
+
+DAILY MEETING (stand up meeting)
+* Participantes: PO, DEVs, SM
+* DEVs respondem 3 perguntas: O que fez ontem, o que ta programado no dia e se tem algum impedimento
+* Reunião é feita com todos de pé
+* Duração de 15 minutos
+
+QUADRO KANBAN
+# TO DO
+# DOING
+# DONE
+
+REVISÃO DA SPRINT (REVIEW)
+* Time DEV apresenta para o PO o trabalho feito (para uma sprint de 30 dias, time-box é de 4 horas)
+
+RETROSPECTIVA DA SPRINT
+* Reunião da equipe para lições aprendidas
+* Transparência
+* mais voltadas para os DEVs
+* Para uma sprint de 30 dias o time-box é de 3 horas
+
+RESUMO DAS CERIMÔNIAS
+* Planejamento da SPRINT
+* Reuniões diárias
+* Review e Retrospectiva
+
+DIFERENÇA
+# GESTÃO DE PROJETOS TRADICIONAL - mais demorado
+# GESTÃO DE PROJETOS ÁGIL - responde muito mais rápido
+
+PRODUCT OWNER (PO)
+O Product Owner (PO) representa o profissional
+que tem a visão do que será desenvolvido ,as
+necessidades a serem atendidas, o público que 
+vai utilizar os serviços e os objetivos a serem
+alcançados.
+
+# papeis e responsabilidades
+* representante da área de negócios
+* PO não é um comite
+* define as funcionalidades do software (Product Backlog)
+* prioriza as funcionalidades de acordo com o valor do negócio
+* garante que o time de desenvolvimento entenda os itens do backlog no nível necessário
+
+# Refining e Planning
+Product Backlog
+Sprint Backlog
+
+RELEASE PLANNING
+Liberação ou lançamento de software (em inglês: release) é o lançamento de nova versão oficial
+de produto de software. Cada vez que um produto de software é criado ou modificado, o fabricante
+e seus desenvolvedores decidem sobre como distribuir ou o novo produto ou a modificação às 
+pessoas que o utilizam
+
+Existem 2 tipos de Release Planning
+* Release Plannig de Múltiplas Squads
+* Release Plannig de Projeto
+
+DEFININDO ESCOPO E PRIORIDADE
+Product Backlog ###############
+* O Product Backlog é composto por Épicos e Estórias
+* Épicos = incremento sem muito detalhamento, ajuda a te direcionar dos caminhos que deve seguir.
+* Estória = Detalhamento dos épicos, um épico normalmente se divide em várias estórias, onde ficam descritos o que deve acontecer e suas regras de negócio.
+
+RISCOS
+* Positivos = muito ignorado nos projetos, porém um dos fatores de maiores ganhos no desenvolvimento de sistemas.
+* Negativos = Itens que podem afetar o prazo, custo ou escopo de um projeto de maneira que pode acabar inviabilizando-o
+
+A transformação digital é um processo no qual as empresas 
+fazem uso da tecnologia para melhorar o desempenho,
+aumentar o alcance e garantir resultados melhores.
+É uma mudança estruturalç nas organiozaçoes dando
+um papel essencial para a tecnologia
+
+# ESTÓRIA = é um conjunto de tarefas
+# ÉPICO = é um conjunto de estórias
+# TAREFAS
+
+O QUE É UM CRITÉRIO DE ACEITE?
+* É uma lista de critérios que precisam ser alcançados para que a User Story atenda
+  os requisitos do usuário e seja aceita pela Product Owner.
+* Os critérios de aceitação têm o objetivo de: definir limites para as user stories. Ajudar
+  o P.O a detalhar em alto nível o que é necessário para entregar valor ao cliente.
+
+ESTIMATIVA E PLANEJAMENTO
+Planning Poker - cartas com a sequência do fibonaci (0, 1/2, 1, 2, 3, 5, 8, 13, 20, 40, 100, ?, ...)
+Planning Tshirt Size - uso de tamanhos de camisa pela facilidade (S, M, L, XL)
+
+CLIENTE / STAKEHOLDER
+* o stakeholder é uma pessoa ou um grupo que ligitima as ações de uma organização e que tem um
+  papel direto ou indireto na gestão e resultados dessa mesma organização. Desta forma, um stakeholder
+  pode ser afetado positivamente ou negativamente, dependendo das suas políticas e forma de atuação.
+
+* Alguns exemplos de stakeholder de uma empresa podem ser os seus funcionários, gestores, gerentes,
+  proprietários, fornecedores, concorrentes, ONGs, clientes, o Estado, credores, sindicatos e diversas outras
+  pessoas ou empresas que estejam relacionadas com uma determinada ação ou projeto.
+
+RITOS
+Daily e Retrospectiva
+Refinamento e Review
+Maturidade da equipe
+
+Daily = todos os dias, mesmo horário, mesmo local, todos de pé, 15 minutos, normalmente só os DEVs
+Retrospectiva = sempre após a conclusão da sprint, normalmente só os DEVs e SM, porém qdo com PO, deve ser feito duas, uma só com os DEVS e SM
+Refinamento = momento para tirar dúvidas com o PO
+Review = apresentado pelos DEVs, todos os Stakeholders devem estar presente, acontece um passo antes da planning e no final da sprint anterior, verificar se a demanda agrega valor ao negócio
+Maturidade = usar pilares (Transparencia, Inspeção, Adaptação), comprometimento, coragem, abertura, foco, respeito
