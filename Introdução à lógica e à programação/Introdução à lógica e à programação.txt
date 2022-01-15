@@ -1,0 +1,52 @@
+LÓGICA:
+* coerência de raciocício de ideias
+* sequencia coerente, regular e necessária de acontecimentos, coisas
+
+ABSTRAÇÃO
+* é a habilidade de concentrar nos aspectos essenciais de um contexto qualquer
+
+ALGORITMO
+* sequência de passoas para resolver um problema
+
+FLUXOGRAMA
+* ferramenta para representar o fluxo de dados ou um processo completo
+
+VARIÁVEL
+* objeto ou posição localizada na memória para armazenar informações
+
+PSEUDOCÓDIGO
+* código/programa escrito com linguagem natural (português)
+
+TIPOS DE VARIÁVEIS
+* numéricas, caracteres, alfanuméricas ou lógicas
+
+CONSTANTE
+* tipo de variável que não se altera o valor
+
+PROGRAMA PARA CRIAR FLUXOGRAMAS
+flowgorithm
+
+TOMADA DE DECISÃO / DESVIO CONDICIONAL
+* se - senão, escolha - caso - pare - caso contrario
+
+EXPRESSÕES 
+* aritméticas (+, -, *, /, ^, %) adição, subtração, multiplicação, potenciação, resto
+* literais (=, <-) atribuição, atribuição
+* relacionais (>, <, >=, <=, ==, !=)
+
+CONCATENAÇÃO
+* termo usado para unior duas strings ou variáveis (& ou + ou .)
+
+ESTRUTURA DE REPETIÇÃO / LAÇO DE REPETIÇÃO
+* enquanto, para, faca .. enquanto
+
+PORTUGOL
+leia("")
+escreva("")
+se(){} senao {}
+escolha() { caso .. pare caso contrario ...}
+
+MATRIZES E VETORES
+Vetores: linhas 
+Matrizes: tabelas
+
