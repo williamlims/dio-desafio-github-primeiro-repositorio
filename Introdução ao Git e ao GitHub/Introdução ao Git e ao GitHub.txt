@@ -1,0 +1,84 @@
+COMANDOS
+listar diretórios: ls, dir
+navegar entre as pastas: cd, cd ..
+limpar tela, cls, clear
+criar pasta: mkdir
+criar arquivo: echo hello > hello.txt
+deletar arquivo: del, rm
+remover pasta: rmdir nomepasta /s /q, rm -rf nomepasta
+ostrar arquivos e pastas ocultas: ls -a
+mover arquivo: mv arquivo.txt ./pastanova/
+
+GIT 
+a sigla SHA significa Secure Hash Algorithm (Algoritmo de Hash Seguro),
+é um conjunto de funções hash criptográficas projetadas pela NSA
+(Agência de Segurança Nacional dos EUA)
+
+A encriptação gera conjunto de characteres identificador de 40 dígitos.
+
+sha1 - código hash
+
+openssl sha1 texto.txt 	= gera a chave de 40 cgaracteres
+
+3 OBJETOS BÁSICOS DO GIT
+BLOBS - contem metadados do git - estrutura: \0 conteúdo
+TREES - armazenam blobs - estrutura: \0 blob sa4d8s texto.txt
+COMMITS - objeto que junta tudo
+
+COMMIT
+tree 		s6df4g
+parente 		afsa4sf
+autor 		f54fa5s
+mensagem 	"inicion de ..."
+timestamp
+
+CHAVES SSH e TOKENS
+
+criar chave: windows ou linux
+1. ssh-keygen -t ed25519 -C email@email.com
+2. navegar até a pasta onde a chave foi criada, com o comando cat, visualizar o arquivo id_gfgd.pub
+3. copiar toda a chave 
+4. Ir no github > profile > settings > SSH and GPG keys > New SSH Key
+5. criar um titulo, e colar a chave lá
+6. eval $(ssh-agent -s)
+7. ssh-add id_ed25519
+8. para clonar ,usar url SSH
+
+TOKENS
+1.  Ir no github > profile > settings >
+2.  Developer settings
+3. Personal access tokens
+4. Generate new token
+5. marcar opção repo para mexer com as opções padrões do github e dar um nome em nota
+
+git init
+
+git config --global user.name "seu nome"
+git config --global user.email "seuemail@email.com"
+
+git add *
+git commit -m "commit inicial"
+
+
+UNTRACKED
+UNMODIFIED
+MODIFIED
+STAGED
+
+SERVIDOR (remote repository)
+AMBIENTE DE DESENVOLVIMENTO (working directory, staging area, local repository)
+
+git status
+
+git config --global --unset user.name
+git config --global --unset user.email
+
+git remote add origin https://github...
+git remote -v 
+git push origin master
+
+git pull
+git pull origin master
+
+Resolvendo Conflitos
+merges
