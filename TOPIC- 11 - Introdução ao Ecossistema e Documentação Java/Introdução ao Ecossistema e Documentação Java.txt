@@ -1,0 +1,160 @@
+O QUE É JAVA
+* Java é uma linguagem de programação e plataforma computacional lançada pela primeira vez pela Sun Microsystems em 1995
+
+ALGUMAS CARACTERÍSTICAS
+* Compilada
+* Interpretada
+* Fortemente tipada
+* Linguagem de alto nível
+* Executada em uma máquina virtual JVM
+
+O QUE É A JVM
+* JVM (Java Virtual Machine) é uma máquina virtual responsável pela tradução dos ByteCodes oriundos do compilador Javac
+  (Java Compiler) em código de máquina de cada sistema operacional.
+
+CARACTs
+* Execução de pilhas
+* Gerenciamento de memória
+* Gerenciamento de threads
+* Otimização de código (Compilação JIT - Just In Time)
+* Garbage Collector (GC)
+
+DIFERENÇAS ENTRE JRE E JDK
+JRE (Java Runtime Environment) - responsável por executar os programas em Java
+JDK (Java Development Kit) - utilitários que permite o desenvolvimento de programas em Java. Já possui a JVM para executar os programas.
+
+PLATAFORMAS JAVA
+JAVA SE (Java Standard Edition) - contém as especificações do Java e pode ser implementado por diversas empresas como Oracle, OpenJDK, Azul Zulu, etc.
+JAVA EE (Java Enterprise Edition) - contém todas as especificações do Java SE e um número de programas úteis para que executem em servidores. Em 2019 foi renomeado para Jakarta EE.
+JAVA ME (Java Micro Edition) - contém e´specificações para desenvolvimento de programas para dispositivos pequenos como celulares, PDA, entre outros.
+
+IMPLEMENTAÇÕES JAVA SE
+* OpenJDK
+* Oracle JDK
+* AdoptOpenJDK
+* Amazon Corretto
+* GraalVM CE
+* Azul Zulu
+
+INSTALANDO O CURL
+* sudo apt install curl
+
+INSTALANDO JAVA COM GERENCIADOR DE VERSÕES
+curl -sl https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/ .jabba/jabba.sh
+
+* jabba ls-remote			lista as versões disponiveis
+* jabba install openjdk@1.11		instala a versão
+* jabba use openjdk@1.11		usa 
+* java --version
+
+COMPILAR
+javac -d target/ -sourcepath src/ src/com/dio/MyFirstProgram.java
+
+PALAVRAS RESERVADAS
+palavras que não podem ser usadas
+
+DECLARAÇÃO DE CLASSe
+public class Classe {
+    // atributos
+    private final String code;
+    private final BigDecimal total;
+
+   // método
+   public BigDecimal metodo(){
+      return total;
+   }
+}
+
+MODIFICADORES DE ACESSO
+public - Qualquer classe de qualquer pacote poderá acessar o atributo ou método
+protected - Qualquer classe definida no mesmo pacote ou subclasse.
+private - Apenas a própria classe
+Sem modificador - Apenas classes definidas no mesmo pacote.
+
+MÉTODOS
+* Métodos são funções que definem o comportamento de uma classe
+
+TIPOS DE MÉTODOS
+Métodos construtores - Definem como uma classe será instanciada "construida"
+Métodos comuns - Definem comportamentos que podem ou não estar atribuídas às regras de negócio. Ex. calcular taxas de um pedido, etc.
+
+ESTRUTURA DE CONDIÇÃO
+* estrutura de condição é responsável por fazer o desvio do fluxo de execução do código de acordo com uma dada condição.
+
+TIPOS DE ESTRUTURA DE CONDIÇÃO
+IF - ELSE
+SWITCH - CASE
+
+ESTRUTURA DE REPETIÇÃO
+* estrutura de repetição é responsável por executar repetitivamente uma instrução ou um bloco de instruções até uma condição estiver satisfeita.
+
+TIPOS DE ESTRUTURA DE REPETIÇÃO
+WHILE
+DO - WHILE
+FOR
+ENHANCED - FOR ( for (String i: item){ ...)
+
+COMENTÁRIOS
+* em linha = //
+* em bloco = /** ... */
+
+JAVADOC
+* javadoc é uma ferramenta para documentaçãono formato HTML que se baseia nos comentários do códig-fonte
+* os comentários precisam conter tags para que a documentação fique legível
+
+TAGS JAVADOC
+@author - específica o autor da classe ou método
+@deprecated = identifica classes ou métodos obsoletos
+@link - possibilita a definição de um link para um outro documento local ou remoto através de um URL
+@param - descreve um parâmetro que será passado a um método
+@return = descreve qual o tipo de retorno de um método
+@see - associa a outras classes ou métodos
+@since - descreve desde quando uma classe ou métodos foi adicionado
+@throws - descreve os tipos de exceções que podem ser lançadas por um método
+@version - descreve a versão da classe ou método
+
+exemplo
+/**
+* @author Nome Pessoa
+* @version 1.0.0
+* @since 1.0.0
+* @see Nome de Algum recurso
+*/
+
+GERAR O JAVADOC
+javadoc -d javadoc/ -sourcepath src/ -subpackager com.dio
+
+COMUNIDADE JAVA
+* o tamanho da comunidade auxilia na escolha de uma linguagem de programação de uma empresa
+* qualidade e facilidade para encontrar informações sobre a linguagem diminuem a curva de aprendizado
+* atualmente existem comunidades de tecnologias onde é possível encontrar um grupo voltado para a linguagem.
+
+CARREIRA
+* muitas empresas de tecnologia aplicam a carreira em Y
+* é importante se especializar em uma área: backend, frontend SRE site reliability engineering, data engineer, etc
+* escolher e focar em uma plataforma de desenvolvimento Java: web, desktop ou mobile
+
+MERCADO ATUAL
+* atualmente o mercado para TI está ^
+* falta profissionais qualificados
+* startups de diversos ramos adotaram a linguagem Java PagSeguro, ifood, AWS, Mercado Livre, Itaú, C6 Bank, Dafiti, Luizalabs
+
+REQs
+* soft skills and hard skills
+* soft skills > hard skills
+
+Soft Skills
+* Resolução de problemas complexos
+* pensamento crítico
+* criatividade
+* gestão de pessoas
+* coordenação em equipe
+* liderança
+
+Hard Skills
+* Spring Boot
+* Spring Cloud
+* Apache Kafka
+* RabbitMQ
+* Arquitetura Cloud
+* Banco de dados relacional e não relacional
