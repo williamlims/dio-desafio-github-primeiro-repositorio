@@ -1,0 +1,80 @@
+* java  é uma linguagem de programação orientada a objetos desenvolvida na década de 90, na empresa Sun Microsystems e posteriormente adquirida pela Oracle em 2008.
+* desde seu lançamento, em maio de 1995, a plataforma java foi adotada mais rapidamentedo que qualquer outra linguagem de programação na história da computação.
+* tornou-se popular pelo seu uso na internet e está presente em navegadores, programas e jogos de computador, celular ,calculadora,m etc
+
+programa.java -> compilador -> programa.class -> JVM -> 0100101011010
+
+CARACTERÍSTICAS DO JAVA
+* diferente daslinguagens de programação compiladas (a compilação do código se dá ainda em tempo de desenvolvimento) a linguagem Java é
+  compilada para um bytecode que é interpretado por uma máquina virtual JVM.
+
+PLATAFORMA X LINGUAGEM
+* a linguagem de programação java é a linguagem convencional da plataforma java, mas não é a sua única linguagem.
+* uma grande vantagem da plataforma é a de não estar presa a um único sistema operacional ou hardware, pois seus programas rodam através de uma máquina virtual que pode ser emulada.
+* JAVA SE (Java Plataform, Standard Edition)
+* JAVA EE (Java Plataform, Enterprise Edition)
+* JAVA ME (Java Platform, Micro Edition)
+
+FASES DA EXECUÇÃO JAVA
+1. Escrevemos o seu código-fonte (arquivo com a extensão .java)
+2. Utilizamos o JDK para compilar o seu código-fonte e gerar o arquivo bytecode (.class)
+3. Para executar o seu programa, a JVM lê o arquivo compilado (.class) e as bibliotecas padrões do JAVA que estão no JRE
+
+JDK( JRE( JVM() ) )
+
+JDK X JRE
+* JDK (JAVA DEVELOPMENT KIT) é o kit de desenvolvimento java responsável por compilar código-fonte .java em bytecode .class
+* JVM (JAVA VIRTUAL MACHINE) é a máquina virtual do java responsável por executar o bytecode .class
+* JRE (JAVA RUNTIME ENVIRONMENT) ambiente de execução do java para o JDK compilar o seu código e para JVM executar o seu programa
+
+VERSÕES JAVA
+* Principal diferença entre OpenJDK e JDK Oracle: O OpenJDK é
+  um Java totalmente open source com uma GNU General Public License e
+  já o JDK Oracle requer uma licença comercial sob o contrato de licença de código binário oracle
+* Os lançamento das versões OpenJDK LTS acontecem pelo menos de 4 em 4 anos
+
+O QUE É IDE?
+* IDE, ou ambiente de desenvolvimento integrado, é um software que combina ferramentas comuns de desenvolvimento em uma
+  única interface gráfica do usuário (GUI), facilitando o desenvolvimento de aplicações.
+* O Java possui um conjunto de ferramentas para se desenvolver programas baseados nele, que são conhecidos como Java Development Kit ou JDK, sendo
+  este o ambiente voltado para os desenvolvedores.
+* A JDK faz parte do funcionamento das IDES - programas de desenvolvimento como IntelliJ, Eclipse, NetBeans, entre outros.
+
+ECLIPSE
+* é uma IDE para desenvolvimento java, porém suporta várias outras linguagens. ele foi feita em Java e segue o modelo open source de desenvolvimento de software.
+
+INTELLIJ
+* o IntelliJ IDEA é um ambiente de desenvolvimento integrado escrito em Java para o desenvolvimento de software de computador. Está disponível como uma edição 
+  da comunidade licenciada Apache 2, e em uma edição comercial proprietária.
+ 
+ATALHOS
+Ctrl + 3 = aba de pesquisa para generate getters e setters, contructor, etcs
+Ctrl + shift + C = comentar o código
+
+mudar bloco de código = Seleciona o bloco, Alt + ceta pra cima 
+organiza a identação = Ctrl + Shift + F
+Shift + F2 = refatorar
+
+GIT E GITHUB
+para compartilhar no git = botão direito em cima de projeto > Team > Share Project
+
+DEBUG/DEPURAÇÃO
+* encontrar para corrigir erros
+* breakpoint = marcar a lateral onde deseja verificar
+ F5 entra nos métodos
+ F6 pula pra linha seguinte
+
+INTELLIJ
+Alt + 7
+
+selecionar + Ctrl + shift + / = comentar o código
+Ctrl + Alt + O = tirar importas nao usados
+Ctrl + Y = apaga linha
+organiza a identação = Ctrl + Alt + L
+
+Refatorar = alterar
+Shift + F6 = refatorar
+Ctrl + d = duplica a linha
+Ctrl + Shift + seta cima/baixo = mover linha
+Ctrl + F4 = fechar aba
+Ctrl + N = novo

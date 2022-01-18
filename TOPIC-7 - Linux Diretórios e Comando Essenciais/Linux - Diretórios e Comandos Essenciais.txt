@@ -1,0 +1,90 @@
+touch teste.txt = cria arquivo de texto
+nano teste.txt = abre editor de texto
+
+OPÇÕES DO NANO
+^G = Ctrl + G
+
+Ctrl + G = Obter Ajuda
+Ctrl + O = Gravar
+Ctrl + W = Onde está?
+Ctrl + K = Recort txt
+Ctrl + J = Justificar
+Ctrl + C = Pos atual
+Ctrl + X = Sair
+Ctrl + R = Ler o arq
+Ctrl + \ = Substituir
+Ctrl + U = Colar txt
+Ctrl + T = VerfOrtog
+Ctrl + _ = Ir p/ linha
+
+cat teste.txt = exibe o conteúdo do arquivo
+tac teste.txt = inverte a exibição das linhas
+head teste.txt = mostra as 10 primeiras linhas
+tail teste.txt = mostra as 10 ultimas linhas
+
+REDIRECIONAMENTOS
+tail teste.txt > distros.txt = cria um novo arquivo com as 10 ultimas linhas de teste.txt
+head teste.txt > distros2.txt = cria um novo arquivo com as 10 ultimas linhas de teste.txt
+
+cal = mostra o calendario do mês
+cal 2020 = mostra o calentario de todo o ano
+date = mostra a data de hoje (dom 16 jan 2022 14:50:34 -03)
+
+date >> calendario.txt = os dois sinais de maior adiciona os valores ao arquivo existente pulando uma linha
+
+comando pipe (|) = usa dois comandos juntos
+comando 1 | comando 2
+
+cat teste.txt | more = faz paginação de textos grandes
+cat teste.txt | less = faz paginação
+
+& = junta dois comandos com pausa
+&& = exibe dois comandos em consecutvo sem pausa
+
+mkdir Pasta && cd Pasta = cria a pasta e na sequencia abre ela
+
+file nomePastaOuArquivo = determina o tipo do arquivo ou pasta
+
+whatis comando = diz o que o comando faz
+
+COMANDOS
+find ~ -name maio.txt = procura no diretório pessoal, por nome, o arquivo maio e traz o caminho se existir
+rm -r * = apaga todos os arquivos da pasta
+
+guiafoca.org = site com material linux
+
+DIRETÓRIOS PRINCIPAIS
+/bin/ 	= binários principais dos usuários
+/boot/	= arquivos do sistema de boot
+/dev/	= arquivos de dispositivos
+/etc/	= arquivos de configuração do sistema
+/home/	= diretório dos usuários comuns do sistema
+/lib/	= bibliotecas essenciais do sistema e os módulos do kernel
+/media/	= diretório de montagem e dispositivos
+/mnt/	= diretório de montagem de dispositivos - mesmo que media
+/opt/	= instalaçao de programas não oficiais de distribuição ou por conta do usuário
+/sbin/	= armazena arquivos executaveis que representam comandos administrativos como shutdown
+/srv/	= diretório para dados de serviços fornecidos pelo sistema
+/tmp/	= diretório para arquivos temporarios
+/usr/	= segunda hierarquia do sistema, onde ficam os usuários comuns do sistema e programas
+/var/	= diretório com arquivos variáveis gerados pelos programas do sistema.
+/root/	= diretório do usuário root - usuário tem o total poder sobre o sistema.
+/proc/	= diretório virtual controlado pelo kernel
+
+COMANDOS DE SISTEMA
+lspci = mostra todas as placas conectadas no computador via pci
+lshw -short = mostra alguns caminhos de hardware
+lscpu = lista as informações da cpu
+lsusb = mostra os dispositivos usb
+arch = mostra a arquitetura do sistema
+uname = mostra no nome do kernel
+uname -r = mostra a versão do kernel
+uname -m = mostra a arquitetura do kernel
+free = mostra informações da memória de armazenamento
+du -h ~ = mostrará o diretório pessoal e o que tudo esta utilizando de memória
+cat /etc/passwd | more = lista os usuários
+reboot = reicinia o sistema
+shutdown -h now = desliga a máquina
+echo "nome" = mostra o nome
+echo -e "nome\n" = mostra nome com caracteres especiais
+echo -e "nome\n" > arquivo.txt = salva no arquivo

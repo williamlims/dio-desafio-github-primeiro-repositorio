@@ -1,0 +1,66 @@
+Croadp em 1991 por Linus Torvalds
+O Linux é o Kernel ou Núcleo do Sistema Operacional
+É desenvolvido por diversas pessoas e empresas ao redor do mundo
+Multitarefa/Multiusuário
+
+* O Linux pode ser distribuido por empresas, organizações ou mesmo pessoas, que podem colocar características próprias no SO como configurações
+  aplicações, sistema de instalação entre outras peculiaridades, assim damos o nome de distribuição, sua escolha é pessoal e depende da aplicação
+
+DISTRIBUIÇÕES MAIS CONHECIDAS
+* ubuntu
+* debian
+* suse
+* fedora
+* red hat
+* kali
+
+O ubuntu é o SO de código aberto que é desenvolvido pela Canonical com base no kernel Linux,
+tem bases no Debian e hoje é muito aceito por muitas comunidades de usuários.
+
+barra lateral de tarefas do linux = dock ou doca
+
+Settings = configurações gerais
+
+TERMINAL, ALGUNS COMANDOS
+* o terminal, shell ou konsole é uma linha de comando onde podemos executar programas específicos do Linux
+* a maioria dos comandos são iguais em diversas distribuições
+
+TERMINAL
+* uso para automação de processos através dos comandos, facilita o trabalho no sistema para profissionais da área
+* o terminal pode ser aberto de diversas formas, mas a sequência de teclas CTRL + ALT + T facilita seu acesso
+
+superusuário = root
+~/ = pasta pessoal
+/ = pasta raiz
+man comando = mostra o manual do comando
+tab auto-completa um nome de diretório ou arquivo (depois de três digitos)
+
+COMANDOS
+pwd = mostra o caminho atual
+ls ou dir = mostra os arquivos e diretórios na pasta atual
+cd nomepasta = entrar em um diretório
+mkdir nomepasta= cria uma nova pasta
+cd .. = retorna um diretório
+cd / = muda para o diretório raiz
+ls -l = mostra detalhes dos diretorios e arquivos
+cd ~ = volta para a pasta pessoal
+history = lista todos os comandos utilizados por ultimo
+!! = repete o utlimo comando
+mv Teste Linux = renomeia a pasta Teste para Linux
+mv Linux/ ~ = move a pasta linux para a pasta pessoal
+touch teste.txt = cria um novo arquivo
+mv teste.txt linux.txt = renomeia o arquivo
+cp linux.txt /home/william = copia o arquivo txt para o endereço da frente
+mv linux.txt /home/william/downloads = move o arquivo para a pasta downloads
+clear = limpa o terminal
+rmdir ou rm -r = exclui diretório
+
+ATALHOS DO TERMINAL
+Ctrl + C = Cancela o comando atual em funcionamento
+Ctrl + Z = Pausa o comando atual, em primeiro plano ou segundo plano
+Ctrl + D = Faz o logout da sessão atual / SAI DO TERMINAL
+Ctrl + W = Apaga uma palavra na linha atual
+Ctrl + U = apaga a linha inteira
+Ctrl + R = Busca um comando recente
+!!          = Repete o último código
+exit      = sai do terminal

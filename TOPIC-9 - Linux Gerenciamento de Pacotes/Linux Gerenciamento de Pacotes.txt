@@ -1,0 +1,65 @@
+GERENCIADORES DE PACOTES
+
+PACOTES
+* pacotes são programas colocados dentro de um arquivo indentificados por sua extensão, e incluem arquivos necessários para a instlalação de programa
+* existem pacotes com a extensão .deb, rpm e outros
+
+GERENCIADORES
+* gerenciadores de pacotes são sistemas que possuem resolução automática de dependências entre pacotes, método fácil de instalação de pacotes
+  ex: de gerenciadores: dpkg, apt e yum
+
+APT
+sudo apt install pacote
+
+sudo apt install nmap
+
+INSTALAÇÃO: sudo apt install pacote
+ATUALIZAÇÃO: sudo apt upgrade pacote
+REMOÇÃO: sudo apt remove pacote
+
+ATUALIZAÇÃO DO SISTEMA
+sudo apt update && apt upgrade
+
+trocar para usuario ROOT
+sudo su
+voltar para o usuario
+su nomeUsuario
+
+pkgs.org = site com pacoters para linux
+
+INSTALAÇÃO pacotes .deb usando dpkg
+sudo dpkg -i nome-do-pacote.deb
+
+TRAZER INFORMAÇÕES DO PACOTE
+sudo dpkg -I nome-do-pacote.deb
+
+REMOÇÃO
+sudo dpkg -r nomedopacote       <- pego na descrição (Package) ,não usar .deb
+
+FEDORA
+versões:
+WORKSTATION - desktop
+SERVER	        - servidor
+
+PACOTES RPM
+
+INSTALAÇÃO
+sudo rpm -ivh pacote.rpm
+
+ATUALIZAÇÃO
+sudo rpm -U pacote.rpm
+
+REMOÇÃO
+sudo rpm -e pacote.rpm
+
+INSTALAÇÃO COM YUM
+sudo yum install pacote
+ex: sudo yum install postgresql
+
+ATUALIZAÇÃO COM YUM
+sudo yum update pacote
+ex: sudo yum update postgresql
+
+REMOÇÃO COM YUM
+sudo yum remove pacote
+ex: sudo yum remove postgresql

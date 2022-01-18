@@ -1,0 +1,86 @@
+O QUE É REDE?
+* rede de computadores é um conjunto de equipamentos interligados de maneira a 
+  trocarem informações e compartilharem recursos, como arquivos de
+  dados gravados, impressoras, modems, software e outros equipamentos
+
+* cada equipamento na rede é considerado um NÓ
+
+* WAN - Wide Area Network ou World Area Network é uma rede geograficamente distribuída - internet
+* MAN - Metropolitan Area Network é uma rede metropolitada que interligam varias redes locais
+* LAN - Local Area Network é uma rede local de uma forma geral em um único prédio ou campus
+
+PROTOCOLOS
+* protocolo é a linguagem usada pelos dispositivos de uma rede de modo que eles consigam se enender - existem vários protocolos
+
+IP - PROTOCOLO DE INTERNET - endereço IP - números que identificam seu computador em uma rede
+ICMP - INTERNET CONTROL MESSAGE PROTOCOL - tem por objetivo provermensagens de controle na comunicação entre nós
+DNS - DOMAIN NAME SERVER - esse protocolo de aplicação tem por função identificar endereços IP para manter uma tablea com endereços dos caminhos de algumas redes
+
+INTERFACE DE REDE
+* interface de rede é um softare e/ou hardware que faz a comunicação em uma rede de computadores
+* as interfaces de rede no linux estão localizadas no diretório /dev e a maioria é criada dinamicamente pelos softwares quando são requisitadas
+* Exemplo: eth0 - placa de rede Ethernet - cabeada
+
+A inerface loopback é um tipo especial de interface que permite fazer conexões com você mesmo, com ela, você pode testar vários
+programas de rede sem interferir em sua rede. padrão, o endereço IP 127.0.0.1 foi escolhido para loopback.
+DNS = transforma o nome em IP
+
+COMANDO IFCONFIG
+sudo apt install net-tools = instala o pacote que contém o ifconfig
+ifconfig = mostra algumas configurações de rede como IPs, etc.
+
+HOSTNAME E PING
+hostname - traz o nome do contador na rede
+hostname -I = traz o endereço de IP na rede
+hostname -i = traz o ip localhost
+who = traz o nome do usuário e a data de log
+whoami = traz só o nome do usuário
+ping www.google.com = envia pacotes para o endereço para verificar se está ativo
+dig www.google.com = traz informações sobre DNS
+dig www.google.com +short = traz só o endereço IP
+w = exibe informações sobre o usuário da rede
+ping www.google.com -w 6 = envia 6 pacotes para o site 
+
+TRACEROUTE E FINGER
+sudo apt install traceroute = para instalação
+traceroute www.google.com = verifica o caminho(nós) que é feito para alcançar o google
+whois www.com.br = traz informações sobre o dominio como quem é o dono, contato ,etec.
+finger = traz toda a informações logado no host
+
+OUTROS COMANDOS
+history -c = apaga o histórico
+alias hh='history' = da apelido para os comandos
+nl teste.txt = mostra o conteudo com o numero de linhas
+wc -l teste.txt = mostra só o numero de linhas
+wc -w teste.txt = mostra o numero de palavras
+wc -c teste.txt = o numero de bytes
+wc -m teste.txt = numero de caracteres
+ls -a = exibe os arquivos acultos
+ls -F = mostra os diretorios com uma barra na frente
+cmp arquivo1 arqivo2 = compara dois arquivos
+sort -n teste.txt = organiza a exibição por ordem númerica
+last reboot = mostra todas as informações dereinicialização do sistema
+route -n = mostra todas as tabelas de roteamenteo IP do kernel
+time = mostra o tempo de processo
+time traceroute www.google.com = calcula otempo que o comando vai levar pra ser processado
+uptime = mostra o tempo que o sistema está rodando
+cowsay "texto" = mostra bichos falando o texto / com opções -g, -f, ...
+cmatrix = efeito de texto caindo como matrix
+init 0 = desliga a máquina
+telinit 0 = desliga a máquina
+halt = desliga a máquina, mas pede uma autenticação para desligar
+seq 1 10 = imprime a sequencia de numero de 1 a 10
+logout - finaliza sessão
+which = exibe o caminho de um programa
+whereis = exibe o caminho do programa e seu manual
+
+
+bellard.org/jslinux/ = site com emuladores de linux feitos em js
+
+
+FEDORA
+vi texto.txt
+ESC, :wq! = para salvar
+nl texto.txt = mostra o numero de linhas
+wc -l texto.txt = numero de linhas
+wc -w texto.txt = numero de palavras
