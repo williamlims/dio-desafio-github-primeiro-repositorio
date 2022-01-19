@@ -1,0 +1,117 @@
+O QUE É UMA VARIÁVEL
+* Um espaço na memória do computador, onde se pode guardar valores
+
+TIPOS DE VARIÁVEIS
+* Instância: objeto
+* Classe: classe
+* Local:dentro de métodos
+* Parâmetro: Na assinatura do método
+
+PADRÃO DE DEFINIÇÃO
+<visibilidade> <modificador> TIPO nome = VALOR;
+* visibilidade: public, protected, private
+* modificador: static e final (constante)
+* TIPO: tipo de dado
+* nome: nome que é fornecido à variável
+* VALOR: um valor inicial, caso se deseje
+
+CONVESÇÕES E REGRAS
+* não evem começar com números
+* embora permitido, $ e _ devem ser evitados
+* são case-sensitive
+* sem espaços
+* Não pode ser as palavras reservadas do Java
+
+EXEMPLOS;
+int i;
+int I;
+int 1a; erro
+int _1a; não é boa prática
+int $aq; não é boa prática
+int I = 10;
+int final j = 10;
+int asrn24678md;
+int asrn246 78md; erro
+int asrn246_78md; 
+int asrn2$46%78_md; erro
+
+BOAS PRÁTICAS
+* sempre começar com letra minuscula
+* nomes expressivos
+* notação camelo				  ex: int final numeroTentativas = 5;
+* quando constante(final) maiuscula e separada por _   ex: int final NUMERO_TENTATIVA = 5;
+
+TIPOS DE DADOS
+* são os calores e consequentemente operações que as variáveis podem assumir e sofrer, respectivamente
+
+TIPIFICAÇÃO
+* estática(forte) vs dinâmica(fraco)
+* primitivo vs composto
+
+TIPOS DE DADOS
+* textual
+* numeral
+* lógico
+* objeto
+
+NUMERAL
+byte: -128 à 127
+short: -32.768 à 32.767
+int: -2.147.483.648 à 2.147.483.647
+long: -9.223.372.036.854.775.808 à 9.223.372.036.854.775.807 ... tem que colocar um L no final
+float:+-3.40282347E+38F ... tem que colocar um F no final
+double: +-1.797693486231570E+308 ... tem que colocar um D no fina
+
+TEXTUAL
+char: caracteres de 16bit unicode ex: 'T'
+String: um tipo "especial" ex: "T"
+
+LÓGICO
+boolean: true ou false
+
+OBJETO
+orientação a objetos
+
+VALORES DEFAULT
+byte = 0
+short = 0
+int = 0
+long = 0L
+float = 0.0f
+double = 0.0d
+char = '\u0000'
+String = null
+boolean = false
+
+BOAS PRÁTICAS
+* usar de forma adequada cada tipo de dado para cada informação
+
+OPERADORES ARITMÉTICOS
+* são símbolos especiais quais são capazes de realizar ações específicas em um, dois ou mais
+  operandos e, em seguida ,retornar um resultado.
+
+TIPOS OPERADORES
+pós-fixado:exp++ ou exp--
+prefixado: ++exp ou --exp
+aritmético: +, -, *, / e %
+atribuição: =, +=, -=, *=, /= e %=
+
+ORDEM PRECEDENCIA
+var++, var--, ++var, --var, *, /, %, +, -, =, +=, -=, *=, /=, %=
+
+CONVERSÃO (CASTING)
+* é a transformação de uma determinada variável de tipo menos específico para um tipo mais específico ou vice-versa
+
+TIPOS
+UPCAST(implicito)
+DOWNCAST(explicito)
+
+IMPLICITO
+long I;	int i = 10;	     I = i;           upcast
+
+EXPLICITO
+int i;         long I = 100;   i = (int) I;     downcast
+
+truncar = na conversão de float para int, perder a parte decimal
+
+
