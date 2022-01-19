@@ -1,0 +1,95 @@
+JVM
+* JVM (Java Virtual Machine) é uma máquina virtual responsável pela tradução dos ByteCodes oriundos do compilador Javac (Java Compiler) em código de máquina de cada sistema operacional
+
+CARACTERISTICAS
+* execução de pilhas
+* gerenciamento de memória
+* gerenciamento de threads
+* otimização de código (compilação JIT
+* Garbage Collector
+
+DIFERENÇAS ENTRE JRE E JDK
+JRE (Java Runtime Environment) - responsável por executar os programas em Java
+JDK (Java Development Kit) - utilitários que permite o desenvolvimento de programas em Java. Já possui a JVM para executar os programas.
+
+PLATAFORMAS JAVA
+JAVA SE (Java Standard Edition) - contém as especificações do Java e pode ser implementado por diversas empresas como Oracle, OpenJDK, Azul Zulu, etc.
+JAVA EE (Java Enterprise Edition) - contém todas as especificações do Java SE e um número de programas úteis para que executem em servidores. Em 2019 foi renomeado para Jakarta EE.
+JAVA ME (Java Micro Edition) - contém e´specificações para desenvolvimento de programas para dispositivos pequenos como celulares, PDA, entre outros.
+
+IMPLEMENTAÇÕES JAVA SE
+* OpenJDK
+* Oracle JDK
+* AdoptOpenJDK
+* Amazon Corretto
+* GraalVM CE
+* Azul Zulu
+
+INSTALANDO O CURL
+* sudo apt install curl
+
+INSTALANDO JAVA COM GERENCIADOR DE VERSÕES
+curl -sl https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/ .jabba/jabba.sh
+
+* jabba ls-remote			lista as versões disponiveis
+* jabba install openjdk@1.11		instala a versão
+* jabba use openjdk@1.11		usa 
+* java --version
+
+COMPILAR
+javac -d target/ -sourcepath src/ src/com/dio/MyFirstProgram.java
+
+RECURSOS DO JAVA 11
+* Default methods
+* Lambdas
+* Method References
+* Streams
+* Datas
+
+NOVIDADES DO JAVA 11
+* Manipulação de Strings
+* Variáveis por inferência
+* Manipulação de arquivos
+* Novidades no Garbage Collector
+* Http Cliente padronizado
+
+IDE
+* uma IDE (Integrated Development Environment) ou ambiente de desenvolvimento integrado é um programa que combina
+  diversas ferramentas essenciais para o desenvolvimento de software dentre elas: editor de código fonte, automatizador
+  de compilação local, depurador, versionador de código, etc.
+
+EXEMPLOS IDE
+* IntelliJ
+* IDEs Jetbrains (PhpStorm, WebStorm, DataGrip, CLion, etc)
+* NetBeans
+* Visual Studio
+* Code::Blocks
+* Android Studio
+* XCode
+
+JAR
+* JAR (JavaArchive) é um arquivo compactado que reúne todas as classes compiladas (Bytecodes) e metadados
+  necessários para execução de um programa.
+
+COMPOSIÇÃO DO JAR
+* classes compiladas (.class)
+* arquivo /META-INF/MANIFEST.MF que contém os metadados
+  necessários para execução do programa. EX:
+    + Main-Class: com.dio.BankApi - definição da classe que contém o método main
+
+COMANDO JAR
+jar [OPTIONAL...] [--release VERSION] [-C dir] files ...
+* -c or --create (cria o arquivo)
+* -f=FILE or --file=FILE (Especifica o nome do arquivo)
+* -m=FILE or --manifest=FILE (inclui as informações de manifest do arquivo de manifesto dado
+* -v or --verbose (envia ou imprime saida verbose na saida padrão
+
+SEQUENCIA
+jabba use openjdk@1.11
+javac -d target/ -sourcepath src/main/java src/main/java/com/dio/BankApi.java
+cd target
+jar cfmv BankApi.jar .../manifest.mf
+java -jar BankApi.jar
+
+
+
