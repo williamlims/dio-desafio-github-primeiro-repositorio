@@ -1,0 +1,133 @@
+LOOPS
+* são estruturas que têm a capacidade de repetir a execução de um fluxo do código
+* TIPOS: for - conjuntos finitos, while - condição permite
+
+ESTRUTURA BÁSICA DO FOR
+for (inicio; fim; increment){
+   // código
+}
+
+INICIO: expressão que indica o ponto de inídio
+FIM: expressão que indica quando parar
+INCREMENTO: expressão faz o "for caminhar"
+
+FOR CLÁSSICO
+for int i = 0; i < 10; i++){
+   System.out.println("O valor de i é " + i);
+}
+
+FOR CLÁSSICO INVERTIDO
+for int i = 10; i > 0; i--){
+   System.out.println("O valor de i é " + i);
+}
+
+FOR EACH
+for (<TipoDeDado> variável: itens){
+   // códigos
+}
+
+FOR COM ITERATOR
+for (Iterator<TipoDeDado> <nomeVariável> = itens.iterator(); itens.hasNext();){
+   // códigos
+}
+
+FOR COM LOOP INFINITO
+for (;;){
+   // Códigos
+}
+
+ESTRUTURA BÁSICA DO WHILE
+while (expressão) {
+   // código
+}
+EXPRESSÃO: expressão booleana que permite e controla a execução do while
+
+WHILE CLÁSSICO
+while (tentativa <= limiteTentativa){
+   // código
+}
+
+WHILE INFINITO
+while (true) {
+   // código
+}
+
+DO_WHILE
+do {
+   // código
+} while (tentativa <= limiteTentativa);
+
+INTERRUPTORES
+* são comandos que têm a capacidade de modificar o fluxo de execução de loops ou métodos
+* OPÇÕES: break, continue, return
+* break e continue são mais usados em loops for e while e return é usado em métodos
+
+BREAK
+* interrompe a execução do for, while e switch
+* Opções de uso: não marcada (unlabeled) e marcada (labeled)
+
+USO DE LABELS COM BREAK
+out:
+for (...){
+   if (...){
+      break out;
+   }
+}
+// continua aqui
+
+CONTINUE
+* interrompe parcialmente a execução do for, while
+* OPÇÕES DE USO: não marcada (unlabeled) e marcada (labeled)
+
+out:
+for (...){
+   if (...){
+      continue out;
+   }
+}
+
+RETURN
+* interrompe a execução de método
+* opções de uso: com valor e sem valor
+...
+return;
+}
+
+OU
+...
+return <valor>;
+}
+
+ARRAYS
+* é um tipo de dado especial, onde um conjunto de valores podem ser armazenados
+
+CARACTERISTICAS
+* sequêncial
+* finito e fixo
+* homogêneo
+* indexado
+
+ELEMENTO DO ARRAY
+* elemento
+* tamanho
+* indice
+
+DEFINIÇÃO/CRIAÇÃO DE ARRAY
+<tipo>[] nome <?=valorinicial?>; // mais comum
+<tipo> nome[] <?=valorinicial?>;
+
+EXEMPLOS
+int[] idades = new int[10];
+idades[0] = 27;
+
+int[] i = {10, 25};
+int[] k = new int[] {1, 2, 3}
+
+int[] j = new int[2]
+
+ARRAY DE ARRAY = MATRIZ
+long[][] matriz = new long[3][3]
+int[][] m = new int[][] {{1,2},{3,4}};
+MATRIZ DE 3 DIMENSÕES
+int[][][] m = new int[3][3][3];
+

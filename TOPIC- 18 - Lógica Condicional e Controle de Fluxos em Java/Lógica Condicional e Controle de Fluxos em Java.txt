@@ -1,0 +1,117 @@
+OPERADORES RELACIONAIS
+* são símbolos especiais quais são capazes de realizar comparações entre determinados operandos e, em seguida, retornar um resultado
+
+TIPOS
+* similaridade: igual, diferente
+* tamanho: maior, maior igual, menor, menor igual
+
+SIMILARIDADE
+* Igualdade: determina se um operando é igual ao outro
+* Diferença: determina se um operando não é igual ao outro
+* SIMBOLOGIA: sigualdade: ==, diferença: !=
+
+TAMANHO
+* Maior: determina se um operando é maior do que outro
+* Menor igual: determina se um operando é menor ou igual a outro
+* SIMBOLOGIA: menor: <, menor igual: <=
+
+OPERADORES LÓGICOS
+* são símbolos especiais quais são capazes de realizar comparações lógicas entre operandos lógicos ou expressões e, em seguida, retornar um resultado
+
+TIPOS
+* conjunção
+* disjunção
+* disjunção exclusiva
+* negação
+
+CONJUNÇÃO
+* operação lógica que só é verdaeira quando ambos os operandos ou expressões envolvidas são verdade
+* SIMBOLOGIA: && , TERMINOLOGIA: and(e)
+
+DISJUNÇÃO
+* operação que só é falsa quando ambos os operandos ou expressões envolvidas são falsos
+* SIMBOLOGIA: || , TERMINOLOGIA: or(ou)
+
+DISJUNÇÃO EXCLUSIVA
+* operação que só é verdade quando ambos os operandos ou expressões são opostos
+* SIMBOLOGIA: ^ , TERMINOLOGIA: xor
+
+NEGAÇÃO
+* operação que inverte o valor lógico de um operando ou expressão
+* SIMBOLOGIA: ! , TERMINOLOGIA: inversão
+
+OPERADORES BITWISE: & e |
+OPERADORES SHIFT: ~, >>, >>>, <<<
+
+BOAS PRÁTICAS
+* crie variáveis auxiliares para guardar resultados intermediários
+
+CONTROLE DE FLUXO
+* são estruturas que tem a capacidade de direcionar o fluxo de execução do código
+
+TIPOS
+* DECISÃO: if, if-else, if-else-if, switch e operador ternário
+* REPETIÇÃO: for, while, do while
+* INTERRUPÇÃO: break, continue e return
+
+DECISÃO
+estrutura que avalia uma condição booleana ou variável para direcionar o fluxo de execução
+* OPÇÕES: if(se), switch(escolha) e operador ternário
+
+OPERADOR IF-ELSE
+if(condição){
+...
+}
+
+if(condição){
+...
+} else{
+..
+}
+
+if(condição){
+...
+} else if(condição){
+..
+} else {
+..
+}
+
+OPERADOR TERNÁRIO
+condição ? true : false;
+
+SWITCH
+switch(variável){
+   case 1:
+      ...
+   break;
+   case 2:
+      ...
+   break;
+   default:
+   ...
+   break;
+}
+
+BOAS PRÁTICAS
+* Switch é para valores exatos e if para expressões booleanas
+* Evitar usar default do switch para cases genéricos
+* Evitar o efeito flecha dos if's
+* Evitar muitos if's aninhados
+* Usar a boa prática da aula 2 para diminuir o tamanho if
+
+BLOCOS
+* é um grupo de 0 ou mais códigos quais trabalham em conjunto para executar uma operação
+
+TIPOS
+* LOCAIS: dentro de métodos
+* ESTÁTICOS: dentro de classes
+* INSTÂNCIA: dentro de classes
+
+LOCAIS
+{
+...
+}
+
+exemplos: if(){...} ... elses{..} ... etc
+

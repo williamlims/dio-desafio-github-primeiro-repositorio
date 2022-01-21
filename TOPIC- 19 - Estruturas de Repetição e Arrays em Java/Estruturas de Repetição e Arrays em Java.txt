@@ -1,0 +1,47 @@
+ESTRUTURA DE REPETIÇÃO
+* o real poder dos computadores está na sua habilidade para repetir uma operação ou uma série de operações várias vezes.
+* cada repetição é chamada laço (llop) é um dos conceitos básicos da programação estruturada
+* uma estrutura de repetição permite que uma sequência de comandos seja executada repetidamente, caso determinadas condições sejam satisfeitas.
+* essas condições são representadas por expressões lógica.
+* as estruturas de repetição podem ser classificadas em:
+	- repetição com teste no início (while)
+	- repetição com teste no final (do-while)
+	- repetição contada (for)
+* o comando break é utilizado para terminar de forma abrupta uma repetição
+* quando comando continue é executado, os comandos restantes da repetição são ignorados e programa volta a testar ou não.
+
+OPERADORES
+Pré-fixados ++var, --var
+Pós-fixados var++, var--
+
+ARITMÉTICOS E ATRIBUIÇÃO
++=
+-=
+*=
+/=
+
+ARRAY
+* Array é um objeto utilizado para armazenar sequencialmente dados do mesmo tipo.
+* permanecem com o mesmo tamanho depois de criados
+
+ARRAYS UNIDIMENSIONAL
+ARRAYS MULTIDIMENSIONAL
+
+ENTRADA TECLADO
+import java.util.Scanner;
+Scanner scan = new Scanner(System.in);
+...
+nome = scan.next();
+idade = scan.nextInt();
+
+VETOR
+int[] vetor = {1, 2, 3, 4, 5};
+String[] variavel = new String[6];
+
+import java.util.Random;
+Random random = new Random();
+
+MATRIZ int[linha][coluna] 
+int[][] matriz = new int[4][4];
+
+
