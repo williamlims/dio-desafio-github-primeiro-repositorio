@@ -1,0 +1,97 @@
+ORIENTAÇÃO A OBJETOS
+PROGRAMAÇÃO ESTRUTURADA
+* programação estruturada é linear e estruturada como o próprio nome diz, ou seja, as tomadas de decisões são
+  feitas de forma ordenada, por meio de verificações condicionais e interações, utilizando como recursos variáveis e rotinas para 
+  o desenvolvimento dos programas.
+
+QUAL O PROBLEMA DA PROGRAMAÇÃO ESTRUTURADA?
+* na verdade não há problema algum, porém, quando utilizada para programas complexos, a organização do código torna-se um
+  desafio, justamente pela estrutura do mesmo não oferecer uma forma simples para agrupar os dados e protegê-lo, deixando
+  a cargo do programador todo o trabalhoo.
+
+MITOS DA PROGRAMAÇÃO ORIENTADA A OBJETOS
+* dizer que simplesmente o uso de uma linguagem orientada a objetos faz o seu programa ser automaticamente orientado a objetos
+  é um mito, pois, é possível e muito comum termos programas em linguagem com suporte a POO que utilizam componentes POO
+  e a implementação é completamente estruturada.
+
+SIMULA 67
+pRIMEIRA lINGUAGEM oRIENTADA A oBJETOS
+* a primeira linguagem orientada a objetos foi desenvolvida nos anos 60 pelos noruegueses Ole-Johan Dahi (1931-2002) e Kristen Nygaard (1926-2002).
+  O Simula 67 continha muitos dos conceitos das principais linguagens OO de hoje como:
+	- classes e objetos
+	- subclasses
+	- métodos virtuais
+	- frameworks
+	- concorrência
+	- gerenciamento de memória
+
+APRENDIZADO TRADICIONAL DA ORIENTAÇÃO A OBJETOS
+* chamamos de objetos a representação programática de algo, como por exemplo
+  um carro, onde temos atributos e ações tomadas que podem ser tomadas ou 
+  executadas por ele.
+
+REPRESENTAÇÃO DA CLASSE CARRO
+* um carro, tem: altura, largura, cor, combustivel, cilindradas, numero de passageiros e
+  velocidade máxima. ele pode: ligar, desligar, parar, andar e acelerar.
+
+Carro
+---------------------------------------------
++ altura: numerico
++ largura: numerico
++ cor:cores
++ combustivel: combustiveis
++ cilindradas: inteiro
++ passageiros: inteiro
++ velocidadeMaxima: numerico
+---------------------------------------------
++ ligar( ): void
++ desligar( ): void
++ parar( ): void
++ andar( ): void
++ acelerar( ): void
++ velocidadeAtual( ): numerico
++ estaParado( ): Boleano
++ estaAndando( ): Boleano
+
+APLICAÇÃO NO DIA A DIA
+* o problema da utilização desse tipo de exemplo para o aprendizado é que ele demonstra por analogia como fazer a 
+  representação de um objeto em uma classe, mas geralmente o programador que está iniciando com a POO tem 
+  dificuldade para transpo-la para um cenário que possa realmente ser aplicado.
+
+* /Os padrões da POO são muito mais do que simplesmente transpor objetos do mundo real para o seu código
+  Esses padrões novos demonstram como componentizar suas aplicações, de forma a aumentar o reuso de código
+  e facilitar a manutenção futura.
+
+FUNÇÕES ESTÁTICAS UTILITÁRIAS
+* uma curiosidade é que as funções utilitárias são nada mais nada menos que a programação estruturada dentro da POO
+
+* primeira atenção no seu dia a dia e criar classes utilitárias, agrupadas por tema, de forma que você possa compartilhar com todo seu time e assim evitar duplicidade de código.
+
+COMO IDENTIFICAR UMA FUNÇÃO UTILITÁRIA
+#### verifique se ela atende alguns requisitos simples ####
+1# ela consegue se resolver por ela mesma, sem dependencias externas?
+2# os parametros de entrada são simples e diretos?
+3# o resultado de saída também é simples e direto?
+
+EXEMPLO DE FUNÇÃO UTILITÁRIA
+* um exemplo clássico de função utilitária á a validação de CPF ou CNPJ
+i/ entrada simples
+i/ não depende de recursos externos Ibanco de dados
+i/ saida simples
+
+# note que independente da sua complexidade interna, temos uma entrada simples, o CPF e uma saida simples, verdadeiro ou falso
+
+CONCEITOS BÁSICOS DA ORIENTAÇÃO A OBJETOS
+CLASSE E OBJETO - uma representação dados em objetos ou entidades para o processamento de outros objetos
+ASSOCIAÇÃO DE CLASSES - quando utilizamos uma classe dentro de outra classe
+HERANÇA - é a utilização de uma classe base, fazendo com que uma nova classe tenha todos os atributos e funções da classe pai, mais a suas próprias
+ENCAPSULAMENTO - é a possibilidade de proteger alguns dados ou funcionalidades da classe, não permitindo que seus consumidores possam acessá-la
+POLIMORFISMO - aqui podemos criar funções que terão o mesmo nome, mas que podem ter diferentes processamentos, implementações, ou na mesma classe o mesmo nome e diferentes entradas
+
+public enum TipoPessoa {FISICA, JURIDICA}
+
+private static final int variavel = valor;
+
+LOMBOK
+SOLID
+
