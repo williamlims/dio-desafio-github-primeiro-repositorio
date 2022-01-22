@@ -1,0 +1,84 @@
+* computador processa informações como 0 e 1 (bit)
+* nós programadores não trabalhamos com bits e sim com números, letras e símbolos especiais
+* cada símbolo é representado por um padrão de 0 e 1 (1-byte = 8 bits)
+* arquivo na visão do sistema operacional é um depósito de dados persistentes ,um conjunto de bytes
+* java vê arquivo como um fluxo sequencial de bytes (stream)
+* cada arquivo acaba com um marcador de fim
+
+INPUT STREAM
+Data Source -> Stream -> Program
+
+OUTPUt STREAM
+Program -> Stream -> Data Destination
+
+CLASSIFICAÇÃO DAS STREAMS
+* Byte Stream: dados na forma de bytes individuais (8-bits) - Ex: imagens, sons, objetos compilados e etc...
+* Character Stream: dados na forma de caracteres de cada 2 bytes (16-bits) - Ex: dados testuais
+
+* Independente da origem ou destino o processo de leitura e escrita envolve os seguintes passos:
+
+LEITURA (read)
+1. Abre uma Stream
+2. While(tem dados) lê dados (read)
+3. Fecha a Stream
+
+ESCRITA (write)
+1. Abre uma Stream
+2. while(tem dados) escreve dados (write)
+3.Fecha a Stream
+
+* InputStream e OutStream são classes úteis para ler e gravar dados binários, como por exemplo imagens ou sons
+* Reader e Writer são as classes básicas na hierarquia de fluxos de caracteres
+
+Estudar...
+Exceção java.io
+Arquivo
+Tabela ASCII
+UNICODE
+
+* a plataforma java armazena caracteres seundo o padrão UNICODE
+* Unicode é uma codificação para caracteres textuais capaz de representar caracteres de muitos idiomas diferentes de todo o mundo
+* Cada caractere é representado por um ponto de código Unicode (code points)
+* as classes mãe Reader e Writer (classes abstratas) representam um fluxo de caracteres. como são classes abstratas, precisam das classes filhas (classes concretas) para ler e gravar dados
+
+FLUXOS PREDEFINIDOS
+* entrada de dados do teclado: System.in / Scanner
+* saida de dados através do console: System.out / PrintWriter
+
+* classe System (java.lang.System) encapsula vários aspectos do ambiente de tempo de execução e tem três atributos
+  public, final e estatic e associados aos arquivos padrão de um sistema operacional
+	- System.in: objeto InputStream para a entrada padrão (teclado)
+	- System.out: objeto PrintStream para a saída padrão (console)
+	- System.err: objeto PrintStream para a saída adrão de erros (console)
+
+CLASSE FILE
+* java.io.File
+* File é a classe responsável por representar arquivos e diretórios do seu sistema de arquivos
+* Esta classe pode fornecer informações úteis assim como criar um novo arquivo, tamanho do arquivo, caminho absoluto, espaço livre em disco ou, ainda, excluí-lo
+
+I/O CARACTERES*
+
+LEITURA E ESCRITAS DE BYTES
+
+BYTE STREAM
+* os programas usam fluxos de bytes para realizar a entrada e a saída de bytes de 8 bits.
+* usando este stream, você pode ler e armazenar máscaras, vídeos, áudios, imagens, objetos compilados etc.
+* todas as classes de fluxo de bytes descendem de InputStream e OutputStream
+
+I/O DE DATA
+* para ler e gravar valores binários de tipos primitivos Java (int, double, sort, por exemplo), usaremos DataImputStream e DataOutputStream
+* DataInputStream e DataOutputStream são frequentemente usados juntos
+
+
+I/O DE OBJECT
+
+SEREALIZAÇÃO
+* a serialização resume-se em salvar, gravar, capturar o estado de um objeto
+* a interface ObjectOutput estende-se da interface DataOutput, o que significa que um ObjectOutputStream herda todos os comportamentos de escrever tipos primitivos e Strings como um DataOutputStream.
+* o método writeObject(Object): grava um objeto no armazenamento ou fluxo subjacente. Este método lança IOException se ocorrer um erro de I/O
+
+DESSERIALIZAÇÃO
+* o processo de reconstrução de um objeto a partir de um objeto de entrada é chamado de desserialização.
+* a interface ObjectInput estende-se da interface DataInput, o que significa que um ObjectInputStream também tem comportamentos de leitura de tipos primitivos e Strings como um DataInputStream
+* o método readObject() lê e retorna um objeto. Lança ClassNotFoundException se a classe do objeto serializado não puder ser encontrada e IOException se ocorrer um erro de I/O
+
