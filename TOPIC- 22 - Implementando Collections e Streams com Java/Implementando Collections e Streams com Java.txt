@@ -1,0 +1,802 @@
+JAVA LIST
+java.util.List
+
+IMPLEMENTAÇÕES
+java.util.ArrayList
+java.util.Vector
+
+* garante ordem de inserção
+* permite adição, atualização, leitura e remoção sem regras adicionais
+* permite ordenação através de comparators
+
+EXEMPLO IMPLEMENTAÇÃO LIST
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Iterator;
+
+public class Main {
+  public static void main(String[] args) {
+  
+    List<String> nomes = new ArrayList<>();
+    
+    nomes.add("Carlos");
+    nomes.add("Pedro");
+    nomes.add("Juliano");
+    nomes.add("Anderson");
+    nomes.add("Maria");
+    nomes.add("João");
+    
+    System.out.println(nomes);
+    Collections.sort(nomes); // organiza por ordem alfabética
+    nomes.set(2, "Larissa");
+    System.out.println(nomes);
+    nomes.set(2, "Wesley"); // Atribui novo valor para a posição
+    System.out.println(nomes);
+    nomes.remove(4); // remove usando o index
+    nomes.remove("Carlos"); // remove usando o objeto
+    System.out.println(nomes);
+    String nome = nomes.get(1); // retorna o valor do index 1
+    
+    // para iterar
+    for (String nomeItem : nomes){
+       System.out.println("--->" + nomeItem);
+    }
+    
+    Iterator<String> iterator = nomes.iterator();
+    while(iterator.hasNext()){
+    
+       System.out.println("--->" + iterator.next());
+    
+    }
+    
+    int tamanho = nomes.size(); // retorna o tamanho da lista
+    boolean temNome = nomes.contains("Carlos"); // verifica se o elemento existe
+    boolean listaVazia = nomes.isEmpty(); // verifica se esta vazio
+    int posicao = nomes.indexOf("Carlos"); // retorna index do item
+    nomes.clear(); // limpa a lista
+  }
+}
+
+
+EXEMPLO IMPLEMENTAÇÃO VECTOR
+import java.util.Vector;
+import java.util.List;
+
+public class Main {
+  public static void main(String[] args) {
+  
+  	List<String> esportes = new Vector<>();
+    
+    esportes.add("Futebol");
+    esportes.add("Basquetebol");
+    esportes.add("Tênis de Mesa");
+    esportes.add("Handbol");
+    
+    esportes.set(2, "Ping Pong"); // altera a posição 2
+    esportes.remove(2); // remove a posição 2
+    esportes.remove("Handbol"); // remove o objeto indicado
+    
+    System.out.println(esportes.get(0));
+    
+    for (String esporte: esportes){
+    	System.out.println(esporte);
+    }
+  }
+}
+
+
+
+QUEUE
+java.util.Queue
+
+java.util.LinkedList
+
+* garante ordem de inserção
+* permite adição, leitura e remoção considerando a regra básica de uma fila: primeiro que entra, primeiro que sai
+* não permite mudança de ordenação
+
+EXEMPLO QUEUE
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Iterator;
+
+public class Main {
+  public static void main(String[] args) {
+  
+  	Queue<String> filaBanco = new LinkedList<>();
+    
+    filaBanco.add("Patrícia");
+    filaBanco.add("Roberto");
+    filaBanco.add("Flávio");
+    filaBanco.add("Pamela");
+    filaBanco.add("Anderson");
+    
+    System.out.println(filaBanco);
+  	
+    // passa o primeiro da fila para a variável e a fila diminui
+    String clienteASerAtendido = filaBanco.poll();
+    // retorna o primeiro da fila sem remove-lo
+    String primeiroCliente = filaBanco.peek();
+    
+    System.out.println(primeiroCliente);
+    
+    System.out.println(clienteASerAtendido);
+    
+    System.out.println(filaBanco);
+    
+    //filaBanco.clear();
+    
+    // traz o primeiro elemento da fila ou erro
+    String primeiroClienteOuErro = filaBanco.element();
+    
+    System.out.println(primeiroClienteOuErro);
+    
+    for(String client: filaBanco){
+    	System.out.println(client);
+    }
+    
+    Iterator<String> iteratorFilaBanco = filaBanco.iterator();
+    
+    while(iteratorFilaBanco.hasNext()){
+    	System.out.println("---->" + iteratorFilaBanco.next());
+    }
+    
+    System.out.println(filaBanco.size());
+    System.out.println(filaBanco.isEmpty());
+  }
+}
+
+
+IMPLEMENTAÇÃO SET
+java.util.Set
+
+java.util.HashSet (mais usado em produção)
+java.util.TreeSet
+java.util.LinkedHashSet
+
+* por padrão, não garante ordem
+* não permite itens repitidos
+* permite adição e remoção normalmente. não possui busca por item e atualização. para leitura, apenas navegação
+* não permite mudança de ordenação
+
+		QUANDO USAR			ORDENAÇÃO			PERFORMANCE
+HashSet		quando não é necessário		não é ordenado, e não		por não ter repetição de valores e não ser ordenado, é a
+		manter uma ordenação		permite valores repitidos		implementação mais performática
+
+LinkedHashSet	quando é necessário manter a ordem	mantém a ordem de inserção		é a implementação mais lenta por ser
+		de inserção dos elementos		dos elementos			necessária manter a ordem
+
+TreeSet		quando é necessário alterar a ordem 	mantém ordem e pode		é performático para leitura. para modificação tem a necessidade
+		através do uso de comparators		ser reordenado			de reordenar sendo mais lento que o LinkedHashSet
+
+EXEMPLO HASHSET
+import java.util.HashSet;
+import java.util.Set;
+import java.util.Iterator;
+
+public class Main {
+  public static void main(String[] args) {
+  
+  	Set<Double> notasAlunos = new HashSet<>();
+    
+    notasAlunos.add(5.8);
+    notasAlunos.add(9.3);
+    notasAlunos.add(6.5);
+    notasAlunos.add(10.0);
+    notasAlunos.add(5.4);
+    notasAlunos.add(7.3);
+    notasAlunos.add(3.8);
+    notasAlunos.add(4.0);
+    
+    System.out.println(notasAlunos);
+    
+    // remove a nota do set
+    notasAlunos.remove(5.8);
+    
+    System.out.println(notasAlunos);
+    
+    // mostra o tamanho do set
+    System.out.println(notasAlunos.size());
+    
+    Iterator<Double> iterator = notasAlunos.iterator();
+    
+    while(iterator.hasNext()){
+    	System.out.println(iterator.next());
+    }
+    
+    for (Double nota: notasAlunos){
+    	System.out.println(nota);
+    }
+    
+    notasAlunos.clear();
+    
+    System.out.println(notasAlunos.isEmpty());
+    
+  }
+}
+
+EXEMPLO LINKEDHASHSET
+import java.util.LinkedHashSet;
+import java.util.Iterator;
+
+public class Main {
+  public static void main(String[] args) {
+  
+  	LinkedHashSet<Integer> sequenciaNumerica = new LinkedHashSet<>();
+    
+    sequenciaNumerica.add(1);
+    sequenciaNumerica.add(2);
+    sequenciaNumerica.add(4);
+    sequenciaNumerica.add(8);
+    sequenciaNumerica.add(16);
+    
+    System.out.println(sequenciaNumerica);
+    
+    // remove a nota do set
+    sequenciaNumerica.remove(4);
+    
+    System.out.println(sequenciaNumerica);
+    
+    // mostra o tamanho do set
+    System.out.println(sequenciaNumerica.size());
+    
+    Iterator<Integer> iterator = sequenciaNumerica.iterator();
+    
+    while(iterator.hasNext()){
+    	System.out.println(iterator.next());
+    }
+    
+    for (Integer numero: sequenciaNumerica){
+    	System.out.println(numero);
+    }
+    
+    sequenciaNumerica.clear();
+    
+    System.out.println(sequenciaNumerica.isEmpty());
+    
+  }
+}
+
+EXEMPLO TREESET
+import java.util.TreeSet;
+import java.util.Iterator;
+
+public class Main {
+  public static void main(String[] args) {
+  
+  	TreeSet<String> treeCapitais = new TreeSet<>();
+    
+    treeCapitais.add("Porto Alegre");
+    treeCapitais.add("Florianópolis");
+    treeCapitais.add("Curitiba");
+    treeCapitais.add("São Paulo");
+    treeCapitais.add("Rio de Janeiro");
+    treeCapitais.add("Belo Horizonte");
+    
+    System.out.println(treeCapitais);
+    
+    // retorna a primeira capital no topo da árvore
+    System.out.println(treeCapitais.first());
+    
+    // retorna a última capital no final da árvore
+    System.out.println(treeCapitais.last());
+    
+    // retorna a primeira capital abaixo na árvore da capital parametrizada
+    System.out.println(treeCapitais.lower("Florianópolis"));
+    
+    // retorna a primeira capital acima na árvore da capital parametrizada
+    System.out.println(treeCapitais.higher("Florianópolis"));
+    
+    //exibe todas as capitais no console
+    System.out.println(treeCapitais);
+    
+    // retorna a primeira capital no topo da árvore, removendo o set
+    System.out.println(treeCapitais.pollFirst());
+    
+    // retorna a primeira capital no final da árvore, removendo o set
+    System.out.println(treeCapitais.pollLast());
+    
+    Iterator<String> iterator = treeCapitais.iterator();
+    
+    while(iterator.hasNext()){
+    	System.out.println(iterator.next());
+    }
+    
+    for (String capital: treeCapitais){
+    	System.out.println(capital);
+    }
+    
+  }
+}
+
+
+IMPLEMENTAÇÃO MAP
+java.util.Map
+
+java.util.HashMap
+java.util.TreeMap
+java.util.HashTable
+
+* entrada de chave e valor
+* permite valores repetidos, mas não permite repetição de chave
+* permite adição, busca por chave ou valor, atualização, remoção e navegação
+* pode ser ordenado
+
+EXEMPLO HASHMAP
+import java.util.HashMap;
+import java.util.Map;
+
+public class Main {
+  public static void main(String[] args) {
+  
+  	Map<String, Integer> campeoesMundialFifa = new HashMap<>();
+    
+    // adiciona os campeões mundiais fifa no mapa
+    campeoesMundialFifa.put("Brasil", 5);
+    campeoesMundialFifa.put("Alemanha", 4);
+    campeoesMundialFifa.put("Itália", 4);
+    campeoesMundialFifa.put("Uruguai", 2);
+    campeoesMundialFifa.put("Argentina", 2);
+    campeoesMundialFifa.put("França", 2);
+    campeoesMundialFifa.put("Inglaterra", 1);
+    campeoesMundialFifa.put("Espanha", 1);
+    
+    System.out.println(campeoesMundialFifa);
+    
+    // atualiza o valor pra chave Brasil
+    campeoesMundialFifa.put("Brasil", 6);
+    
+    System.out.println(campeoesMundialFifa);
+    
+    // retorna a agentina
+    System.out.println(campeoesMundialFifa.get("Argentina"));
+
+    // retorna se existe ou não um campeão Franca
+    System.out.println(campeoesMundialFifa.containsKey("França"));
+    
+    // remove o campeão França
+    campeoesMundialFifa.remove("França");
+    
+    // retorna se existe ou não um campeão Franca
+    System.out.println(campeoesMundialFifa.containsKey("França"));
+    
+    // retorna se existe ou não alguma seleção hexa campea
+    System.out.println(campeoesMundialFifa.containsValue(6));
+    
+    // retorna o tamanho do mapa
+    System.out.println(campeoesMundialFifa.size());
+    
+    System.out.println(campeoesMundialFifa);
+    
+    // navega nos registros do mapa
+    for (Map.Entry<String, Integer> entry: campeoesMundialFifa.entrySet()){
+    	System.out.println(entry.getKey() + " -- " + entry.getValue());
+    }
+    
+    // navega nos registros do mapa
+    for (String key: campeoesMundialFifa.keySet()){
+    	System.out.println(key + " -- " + campeoesMundialFifa.get(key));
+    }
+    
+    System.out.println(campeoesMundialFifa);
+    
+    // retorna se existe ou não um campeão Estados Unidos
+    System.out.println(campeoesMundialFifa.containsKey("Estados Unidos"));
+    
+    // retorna se existe o valor 5
+    System.out.println(campeoesMundialFifa.containsValue(5));
+    
+    // retorna o tamanho do mapa
+    System.out.println(campeoesMundialFifa.size());
+    
+    campeoesMundialFifa.clear();
+    
+    // retorna o tamanho do mapa
+    System.out.println(campeoesMundialFifa.size());
+    
+  }
+}
+
+EXEMPLO TREEMAP
+import java.util.TreeMap;
+import java.util.Map;
+import java.util.Iterator;
+
+public class Main {
+  public static void main(String[] args) {
+  
+  	TreeMap<String, String> treeCapitals = new TreeMap<>();
+    
+    // monta a árvore com as capitais
+    treeCapitals.put("RS", "Porto Alegre");
+    treeCapitals.put("SC", "Florianópolis");
+    treeCapitals.put("PR", "Curitiba");
+    treeCapitals.put("SP", "São Paulo");
+    treeCapitals.put("RJ", "Rio de Janeiro");
+    treeCapitals.put("MG", "Belo Horizonte");
+    
+    System.out.println(treeCapitals);
+    
+    // retorna a primeira capital no topo da árvore    
+    System.out.println(treeCapitals.firstKey());
+    
+    // retorna a última capital no final da árvore    
+    System.out.println(treeCapitals.lastKey());
+    
+    // retorna a primeira capital abaixo na árvore da capital parametrizada  
+    System.out.println(treeCapitals.lowerKey("SC"));
+    
+    // retorna a primeira capital acima na árvore da capital parametrizada  
+    System.out.println(treeCapitals.higherKey("SC"));
+    
+    System.out.println(treeCapitals);
+    
+    // retorna a primeira capital no topo da árvore  
+    System.out.println(treeCapitals.firstEntry().getKey() + " - " + treeCapitals.firstEntry().getValue());
+    
+    // retorna a última capital no final da árvore  
+    System.out.println(treeCapitals.lastEntry().getKey() + " - " + treeCapitals.lastEntry().getValue());
+    
+    // retorna a primeira capital abaixo na árvore da capital parametrizada 
+    System.out.println(treeCapitals.lowerEntry("SC").getKey() + " - " + treeCapitals.lowerEntry("SC").getValue());
+    
+    // retorna a primeira capital acima na árvore da capital parametrizada 
+    System.out.println(treeCapitals.higherEntry("SC").getKey() + " - " + treeCapitals.higherEntry("SC").getValue());
+    
+    System.out.println(treeCapitals);
+    
+    // retorna a primeira capital no topo da árvore, removendo do map
+    System.out.println(treeCapitals.pollFirstEntry().getKey() + " - " + treeCapitals.pollFirstEntry().getValue());
+    
+    // retorna a primeira capital no final da árvore, removendo do map
+    System.out.println(treeCapitals.pollLastEntry().getKey() + " - " + treeCapitals.pollLastEntry().getValue());
+    
+    System.out.println(treeCapitals);
+
+    Map.Entry<String, String> firstEntry = treeCapitals.pollFirstEntry();
+    Map.Entry<String, String> lastEntry = treeCapitals.pollLastEntry();
+    
+    // retorna a primeira capital no topo da árvore removendo do map
+    System.out.println(firstEntry.getKey() + " - " + firstEntry.getValue());
+    
+    // retorna a primeira capital no final da árvore removendo do map
+    System.out.println(lastEntry.getKey() + " - " + lastEntry.getValue());
+   
+    System.out.println(treeCapitals);
+    
+    Iterator<String> iterator = treeCapitals.keySet().iterator();
+    
+    while (iterator.hasNext()){
+    	String key = iterator.next();
+        System.out.println(key + " - " + treeCapitals.get(key));
+    }
+    
+    for (String capital: treeCapitals.keySet()) {
+    	System.out.println(capital  + " - " + treeCapitals.get(capital));
+    }
+    
+    for (Map.Entry<String, String> capital: treeCapitals.entrySet()){
+    	System.out.println(capital.getKey() + " - " + capital.getValue());
+    }
+    
+  }
+}
+
+EXEMPLO HASHTABLE
+import java.util.Hashtable;
+import java.util.Map;
+import java.util.Iterator;
+
+public class Main {
+  public static void main(String[] args) {
+  	
+    Hashtable<String, Integer> estudantes = new Hashtable<>();
+    
+    estudantes.put("Carlos", 21);
+    estudantes.put("Mariana", 33);
+    estudantes.put("Rafaela", 18);
+    estudantes.put("Pedro", 44);
+    
+    System.out.println(estudantes);
+    
+    estudantes.put("Pedro", 55);
+    
+  	System.out.println(estudantes);
+    
+    // remove um estudante no índice 0
+    estudantes.remove("Pedro");
+    
+    System.out.println(estudantes);
+    
+    // recupera um estudante no índice 2
+    int idadeEstudante = estudantes.get("Mariana");
+    
+    System.out.println(estudantes);
+    
+    System.out.println(estudantes.size());
+    
+    // navega nos registros do mapa
+    for (Map.Entry<String, Integer> entry: estudantes.entrySet()){
+    	System.out.println(entry.getKey() + " -- " + entry.getValue());
+    }
+    
+    // navega nos registros do mapa
+    for (String key : estudantes.keySet()){
+    	System.out.println(key + " -- " + estudantes.get(key));
+    }
+    
+    System.out.println(estudantes);
+    
+  }
+}
+
+INTERFACES COMPARATORS
+* java.util.Comparator - interface para definir classe com regra de ordenação
+* java.util.Comparable - interface para definir regra de ordenação em uma classe de domínio
+* algoritmos de ordenação
+* utilizado primariamente em java.util.List
+* permite a ordenação de objetos complexos (criados pelo usuário)
+
+EXEMPLO COMPARATORS
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class Main {
+
+  public static void main(String[] args) {
+  	
+    List<Estudante> estudantes = new ArrayList<>();
+    
+    estudantes.add(new Estudante("Pedro", 19));
+    estudantes.add(new Estudante("Carlos", 23));
+    estudantes.add(new Estudante("Mariana", 21));
+    estudantes.add(new Estudante("João", 18));
+    estudantes.add(new Estudante("Thiago", 20));
+    estudantes.add(new Estudante("George", 22));
+    estudantes.add(new Estudante("Larissa", 21));
+    
+    System.out.println("--- ordem de inserção ---");
+    System.out.println(estudantes);
+    
+    estudantes.sort((first, second) -> first.getIdade() - second.getIdade());
+    
+    System.out.println("--- ordem natural dos números - idade ---");
+    System.out.println(estudantes);
+    
+    estudantes.sort((first, second) -> second.getIdade() - first.getIdade());
+    
+    System.out.println("--- ordem reversa dos números - idade ---");
+    System.out.println(estudantes);
+    
+    estudantes.sort(Comparator.comparingInt(Estudante::getIdade));
+    
+    System.out.println("--- ordem natural dos números - idade (method reference) ---");
+    System.out.println(estudantes);
+    
+    estudantes.sort(Comparator.comparingInt(Estudante::getIdade).reversed());
+    
+    System.out.println("--- ordem reversa dos números - idade (method reference) ---");
+    System.out.println(estudantes);
+    
+    Collections.sort(estudantes);
+    
+    System.out.println("--- ordem natural dos números - idade (interface Comparable) ---");
+    System.out.println(estudantes);
+    
+    Collections.sort(estudantes, new EstudanteOrdemIdadeReversaComparator());
+    
+    System.out.println("--- ordem reversa dos números - idade (interface Comparator) ---");
+    System.out.println(estudantes);
+    
+  }
+  
+}
+
+class Estudante implements Comparable<Estudante> {
+  private final String nome;
+  private final Integer idade;
+  
+  public Estudante(String nome, Integer idade){
+  	this.nome = nome;
+    this.idade = idade;
+  }
+  
+  public String getNome() { return nome; }
+  
+  public Integer getIdade() { return idade; }
+  
+  @Override
+  public String toString() { return nome + " - " + idade; }
+  
+  @Override
+  public int compareTo(Estudante o) { return this.getIdade() - o.getIdade(); }
+  
+}
+
+class EstudanteOrdemIdadeReversaComparator implements Comparator<Estudante> {
+
+  @Override
+  public int compare(Estudante o1, Estudante o2){
+  	return o2.getIdade() - o1.getIdade();
+  }
+  
+}
+
+OPTIONAL
+* tratamento para valores que podem ser nulos
+* possui 2 estados - PRESENTE, VAZIO
+* permite que você execute operações em valores que podem ser nulos sem preocupação com as famosas NullPointerExceptions
+
+EXEMPLO OPTIONAL
+import java.util.Optional;
+
+public class Main {
+
+  public static void main(String[] args) {
+  	
+    Optional<String> optionalString = Optional.of("Valor presente");
+    
+    System.out.println("Valor opcional que está presente");
+    optionalString.ifPresentOrElse(System.out::println, () -> System.out.println("não está presente"));
+    
+    Optional<String> optionalNull = Optional.ofNullable(null);
+    
+    System.out.println("Valor opcional que não está presente");
+    optionalNull.ifPresentOrElse(System.out::println, () -> System.out.println("null = não está presente"));
+    
+    Optional<String> emptyOptional = Optional.empty();
+    
+    System.out.println("Valor opcional que não está presente");
+    emptyOptional.ifPresentOrElse(System.out::println, () -> System.out.println("empty = não está presente"));
+    
+    Optional<String> optionalNullErro = Optional.of(null);
+    
+    System.out.println("Valor opcional que lança erro NullPointerException");
+    optionalNullErro.ifPresentOrElse(System.out::println, () -> System.out.println("erro = não está presente"));
+    
+  }
+  
+}
+
+EXEMPLO COM NUMBERS
+import java.util.OptionalDouble;
+import java.util.OptionalInt;
+import java.util.OptionalLong;
+
+public class Main {
+
+  public static void main(String[] args) {
+  	    
+    System.out.println("***Valor inteiro opcional***");
+    OptionalInt.of(12).ifPresent(System.out::println);
+    
+    System.out.println("***Valor decimal opcional***");
+    OptionalDouble.of(53.2).ifPresent(System.out::println);
+    
+    System.out.println("***Valor long opcional***");
+    OptionalLong.of(23L).ifPresent(System.out::println);
+        
+  }
+  
+}
+
+OUTRO EXEMPLO OPTIONAL
+import java.util.Optional;
+
+public class Main {
+
+  public static void main(String[] args) {
+  	    
+    Optional<String> optionalString = Optional.of("Valor Opcional");
+    
+    System.out.println(optionalString.isPresent());
+    
+    optionalString.ifPresent(System.out::println);
+    
+    optionalString.ifPresentOrElse(System.out::println, () -> System.out.println("Valor não está presente"));
+    
+    if (optionalString.isPresent()){
+    	String valor = optionalString.get();
+        System.out.println(valor);
+    }
+    
+    optionalString.map((valor) -> valor.concat("****")).ifPresent(System.out::println);
+    
+    optionalString.orElseThrow(IllegalStateException::new);
+        
+  }
+  
+}
+
+STREAM API
+* manipulação de coleções com paradigma funcional de forma paralela
+* imutável - não altera a coleção origem, sempre cria uma nova coleção
+* PRINCIPAIS FUNCIONALIDADES
+	- Mapping - retorna uma coleção com mesmo tamanho da origem com os elementos alterados
+	- Filtering - retorna uma coleção igual ou menor que a coleção origem, com os elementos intactos
+	- ForEach - executa uma determinada lógica para cada elemento, retornando nada.
+	- Peek - executa uma determinada lógica para cada elemento, retornando a própria coleção
+	- Counting - retorna um inteiro que representa a contagem de elementos
+	- Grouping - retorna uma coleção agrupada de acordo com a regra definida
+
+EXEMPLO PRÁTICO
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Main {
+
+  public static void main(String[] args) {
+
+  	// cria a coleção de estudantes
+    List<String> estudantes = new ArrayList<>();
+    
+    // adiciona4 estudantes para coleção
+    estudantes.add("Pedro");
+    estudantes.add("Thayse");
+    estudantes.add("Marcelo");
+    estudantes.add("Carla");
+    estudantes.add("Juliana");
+    estudantes.add("Thiago");
+    estudantes.add("Rafael");
+    
+    // retorna a contagem de elementos do stream
+    System.out.println("Contagem: " + estudantes.stream().count());
+    
+    // retorna o elemento com maior número de letras
+    System.out.println("Maior número de letras: " + estudantes.stream().max(Comparator.comparingInt(String::length)));
+    
+    // retorna o elemento com menor número de letras
+    System.out.println("Menor número de letras: " + estudantes.stream().min(Comparator.comparingInt(String::length)));
+    
+    // retorna os elementos que tem a letraR no nome
+    System.out.println("Com a letra r no nome: " + estudantes.stream().filter((estudante) -> estudante.toLowerCase().contains("r")).collect(Collectors.toList()));
+    
+    // retorna uma coleção com os nomes concatenados a quantidade de letra de cada nome
+    System.out.println("Retorna uma nova coleção com a quantidade de letras: " + estudantes.stream().map(estudante -> estudante.concat(" - ").concat(String.valueOf(estudante.length()))).collect(Collectors.toList()));
+    
+    // retorna comente os 3 primeiros elementos da coleção
+    System.out.println("retorna os 3 primeiros elementos: " + estudantes.stream().limit(3).collect(Collectors.toList()));
+    
+    // exibe cada elemento no console, e depois retorna a mesma coleção
+    System.out.println("retorna os elementos: " + estudantes.stream().peek(System.out::println).collect(Collectors.toList()));
+    
+    // exibe cada elemento no console sem retornar outra coleção
+    System.out.println("retorna os elementos novamente: ");
+    estudantes.stream().forEach(System.out::println);
+    
+    // retorna true se todos os elementos possuem a letra W no nome
+    System.out.println("tem algum elemento com W no nome? " + estudantes.stream().allMatch((elemento) -> elemento.contains("W")));
+    
+    // retorna true se algum dos elementos possuem a letra a minúscula no nome
+    System.out.println("tem algum elemento com a minúscula no nome? " + estudantes.stream().anyMatch((elemento) -> elemento.contains("a")));
+    
+    // retorna true se nehum eleento possui a letra a minuscula no nome
+    System.out.println("não tem nenhum elemento com a minúscula no nome? " + estudantes.stream().noneMatch((elemento) -> elemento.contains("a")));
+    
+    // retorna o primero elemento da coleção, se existir exibe no console
+    System.out.println("retorna o primeiro elemento da coleção: ");
+    estudantes.stream().findFirst().ifPresent(System.out::println);
+    
+    // exemplo de operação encadeada
+    System.out.print("Operação encadeada: ");
+    System.out.println(estudantes.stream()
+    	.peek(System.out::println)
+        .map(estudante -> estudante.concat(" - ").concat(String.valueOf(estudante.length())))
+        .peek(System.out::println)
+        .filter((estudante) -> estudante.toLowerCase().contains("r"))
+        .collect(Collectors.toList()));
+        //.collect(Collectors.joining(", ")));
+        //.collect(Collectors.toSet()));
+        //.collect(Collectors.groupingBy(estudante -> estudante.substring(estudante.indexOf("-") + 1))));
+  }
+  
+}
+
+
+
+
