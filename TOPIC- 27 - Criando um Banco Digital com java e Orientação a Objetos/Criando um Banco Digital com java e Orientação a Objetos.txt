@@ -1,0 +1,37 @@
+Domínio/Problema
+* Considerando nosso conhecimento no domínio bancário, iremos abstrair uma solução Otientada a Objetos
+  em Java. Para isso, vamos interpretar o seguinte cenário:
+
+# UM BANCO OFERECE AOS SEUS CLIENTES DOIS TIPOS DE CONTAS (CORRENTE E POUPANÇA), AS QUAIS POSSUEM AS FUNCIONALIDADES DE
+   DEPÓSITO, SAQUE E TRANSFERÊNCIA (ENTRE CONTAS DA PRÓPRIA INSTITUIÇÃO).
+
+ABSTRAÇÃO	
+* Habilidade de concentrar-se nos aspectos essenciais de um domínio,
+  ignorando características menos importantes ou acidentais.
+* Nesse contexto, objetos são abstrações de entidades existentes no
+  domínio em questão.
+
+ENCAPSULAMENTO
+* Encapsular significa esconder a implementação dos objetos, criando assim
+  interfaces de uso mais concisas e fáceis de usar/entender. O encapsulamento
+  favorece principalmente dois aspectos de um sistema: a manutenção e a evolução.
+
+HERANÇA
+* Permite que você defina uma classe filha que reutiliza (herda), estende ou modifica
+  o comportamento de uma classe pai. A classe cujos membros são herdados é chamada de classe
+  base. A classe que herda os membros da classe base é chamada de classe derivada.
+
+* uma classe abstrata garante que ela não poderá ser instanciada, apenas por meio dos seus filhos
+
+POLIMORFISMO
+* Capacidade de um objeto poder ser referenciado de várias formas, ou seja, é a capacidade de tratar
+  objetos criados a partir das classes específicas como objetos de uma classe genérica.
+* Polimorfismo não quer dizer que o objeto fica se transformando, muito pelo contrário, um objeto nasce de
+  um tipo e morre daquele tipo o que pode mudar é a maneira como nos referimos a ele.
+
+DESAFIO DO ROJETO
+* Use todo seu conhecimento em Java e Orientação a Objetos para evoluir o projeto
+  criado nesta aula. Para isso, seguem algumas sugestões:
+  - use todo o seu conhecimento para estender o domínio, incluindo novas classes, atributos e/ou métodos;
+  - incluir o Lombok ao projeto para reduzir sua verbosidade de código.
+
