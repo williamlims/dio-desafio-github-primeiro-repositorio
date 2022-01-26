@@ -1,0 +1,71 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\PROJETOS2\\dio-desafio-github-primeiro-repositorio\\TOPIC- 29 - Modelando um banco de dados na prática com SQL SERVER\\ControleAcessoEstrelaDaMorte-master\\src\\ConroleAcesso\\ConroleAcesso.csproj": {}
+  },
+  "projects": {
+    "D:\\PROJETOS2\\dio-desafio-github-primeiro-repositorio\\TOPIC- 29 - Modelando um banco de dados na prática com SQL SERVER\\ControleAcessoEstrelaDaMorte-master\\src\\ConroleAcesso\\ConroleAcesso.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\PROJETOS2\\dio-desafio-github-primeiro-repositorio\\TOPIC- 29 - Modelando um banco de dados na prática com SQL SERVER\\ControleAcessoEstrelaDaMorte-master\\src\\ConroleAcesso\\ConroleAcesso.csproj",
+        "projectName": "ConroleAcesso",
+        "projectPath": "D:\\PROJETOS2\\dio-desafio-github-primeiro-repositorio\\TOPIC- 29 - Modelando um banco de dados na prática com SQL SERVER\\ControleAcessoEstrelaDaMorte-master\\src\\ConroleAcesso\\ConroleAcesso.csproj",
+        "packagesPath": "C:\\Users\\TECHSTUDIO\\.nuget\\packages\\",
+        "outputPath": "D:\\PROJETOS2\\dio-desafio-github-primeiro-repositorio\\TOPIC- 29 - Modelando um banco de dados na prática com SQL SERVER\\ControleAcessoEstrelaDaMorte-master\\src\\ConroleAcesso\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\TECHSTUDIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0-windows7.0": {
+            "targetAlias": "net5.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

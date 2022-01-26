@@ -1,0 +1,186 @@
+REPRESENTAÇÃO BANCO RRELACIONAL
+E-Commerce
+[Produtos] -> [Vendas] <- [Clientes] 
+
+Clientes
+id:int
+Nome:varchar
+Cpf:char
+Ativo:bit
+
+ATOMICIDADE
+* garantir que todos os dados estão corretos antes de inserir na tabela
+
+CONSISTêNCIA DOS DADOS
+
+STRING PARA CONEXÃO
+Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;
+
+not in
+
+SSMS - software para gerenciamento do banco
+
+no prompt usar comando "go" depois dos comandos sql
+
+para criar banco de dados = botão direito em cima de Databases/Banco de dados
+tipos e dados
+int
+bigint
+varchar /max4000		varchar(10) salvando 'a', salvará 'a'
+char			char salvando 'a', salvará 'a         '  
+
+insert Teste values (null, 'b') // usando null - ausencia de valor
+
+select getdate() 		= traz a data do servidor no formato: 2022-01-24 12:09:13.007
+select * from sys.tables	= traz as tabelas do banco master
+create database nomeBanco	= cria um banco de dados
+use nomeBanco		= altera para o banco de dados
+create table Teste		= cria uma tabela
+{
+	Descricao varchar(50) null,
+	Complemento char(10) not null
+}
+drop table Teste		= apagar tabela
+select * from nomeTabela	= busca os dados da tabela
+insert into clientes (..) values (..)	= inserir dados na tabela
+
+
+create table Produtos
+(
+	Codigo int,
+	Nome varchar(100),
+	Descricao varchar(200),
+	Preco float
+)
+
+create table Clientes 
+(
+	Codigo int,
+	Nome varchar(200),
+	TipoPessoa char(1)
+)
+
+create table Pedido
+(
+	Codigo int not null,
+	DataSolicitacao datetime not null,
+	FlagPago bit not null,
+	TotalPedido float not null,
+ 	CodigoCliente int not null
+)
+
+create table PedidoItem
+(
+	CodigoPedido int not null,
+	CodigoProduto int not null,
+	Preco float not null,
+ 	Quantidade int not null
+)
+
+TIPOS DE DADOS SQLSERVER
+bigint
+binary(50)
+bit
+char(10)
+date
+datetime
+datetime2(7)
+datetimeoffset(7)
+decimal(18, 0)
+float
+geography
+geometry
+hierarchyid
+image
+int
+money
+nchar(10)
+ntext
+numeric(18, 0)
+nvarchar(50)
+nvarchar(MAX)
+real
+smalldatetime
+smallint
+smallmoney
+sql_variant
+text
+time(7)
+timestamp
+tinyint
+uniqueidentifier
+varbinary(50)
+varbinaryMAX)
+varchar(50)
+varcharMAX)
+xml
+
+CONDIÇÕES
+* AND, OR
+
+FORMAS DE INSERT
+insert into clientes (codigo, nome, TipoPessoa) values (1, 'Marcos', 'M')
+insert clientes (codigo, nome, TipoPessoa) vales (2, 'Bob', 'M')
+insert clientes (TipoPessoa, codigo, nome) values ('F', 3, 'Carla')
+insert clientes values (4, 'Bruno', 'M')
+insert clientes values (5, 'Bianca', 'F'), (6, 'Iris', 'F')
+
+FORMAS DE SELECT
+select * from clientes
+select Nome from clientes
+select Codigo, Nome from clientes
+select * from clientes where TipoPessoa = 'F'
+
+FORMAS DE UPDATE
+update clientes set Codigo=7, Nome='Maria' where Codigo=6
+
+FORMAS DE DELETE
+delete from clientes where Codigo=1
+delete from clientes where Codigo in(1, 2, 3, 4)
+
+
+
+EXEMPLOS
+insert Produtos values (1, 'Caneca', 'Caneca Azul', 1.5)
+insert Produtos values (1, 'Caderno', 'Caderno 20 Folhas', 20.99)
+insert Pedido values (1, getdate(), 0, 3, 7)
+
+select *, case when TipoPessoa = 'F' then 'Mulher' when TipoPessoa = 'M' then 'Homem' else 'Animal' end TipoPessoaApelido from clientes
+select *, case when TipoPessoa = 'F' then 'Mulher' when TipoPessoa = 'M' then 'Homem' else 'Animal' end + convert(varchar,getdate(), 103) from clientes
+select *, convert(varchar, DataSolicitacao, 103) from Pedido
+
+Alt + F1 = mostra detalhes da tabela, selecionar só o nome da tabela no código
+
+CHAVE PRIMÁRIA
+* chave primária, é uma chave que identifica um registro de forma única. pode ser´de chave única ou composta
+Identity Specification = Yes
+Indentity Increment = 1
+
+CHAVE ESTRANGEIRA
+* chave que faz a relação de uma tabela com outra tabela
+
+ALTERAR UMA TABELA
+alter table Clientes add constraint pk_cliente primary key (Codigo)
+alter table PedidoItem add constraint fk_pedido foreign key (CodigoPedido) references Pedido (CodigoCliente)
+
+
+NORMALIZAÇÃO
+1 - não deve ter um conjunto de colunas repetido ou um conjunto de informações em uma mesma propriedade. EX ENDEREÇO: rua edigar, 102, centro, 145698-00 / não pode
+2 - não pode ter informações duplicadas que dependa da chave primária
+
+FORMAS DE JOIN
+inner join	= traz tudo que exite nas duas tabelas
+left join	= traz todas as informações da tabela da esquerda / se nao tiver na direita traz nulo
+right join	= traz todas as informações da tabela da direita / se nao tiver na esquerda traz nulo
+
+
+EXMPLO INNER
+select sum(Preco * Quantidade)
+from PedidoItem t1
+inner join PedidoItemLog t2
+on t1.CodigoPedido = t2.CodigoPedido
+and t1.CodigoProduto = t2.CodigoProduto
+inner join StatusPedidosItem t3
+on t3.Codigo = t2.CodigoStatusPedidoItem
+
+
