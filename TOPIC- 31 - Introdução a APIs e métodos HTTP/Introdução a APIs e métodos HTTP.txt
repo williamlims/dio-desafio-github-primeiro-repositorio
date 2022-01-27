@@ -1,0 +1,51 @@
+O QUE É API
+* Application Program Interface
+* Pense em API como a camada que esconde as regras e possibilita uma comunicação externa
+* Facilita muito a integração
+* Existem várias metodologias (ou arquiteturas), como por exemplo: SOA, REST, uso por meio de SDK
+
+REST / RESTFUL
+* rest é uma arquitetura, restful é uma matodologia que usa rest
+
+HTTP METHODS
+* GET: sempre obtém os dados
+* POST: cria um novo registro ou recurso
+* PUT: atualiza um registro existente
+* DELETE: remove um registro existente
+
+PADRÕES
+GET: /api/dev/user
+GET: /api/dev/user/{id}
+POST: /api/dev/user
+PUT: /api/dev/user/{id}
+DELETE: /api/dev/user/{id}
+
+ERROS COMUNS (funciona mas não é restful)
+POST: /api/dev/user/{id}
+POST: /api/dev/user/create
+PUT: /api/dev/user
+DELETE: /api/dev/use?id=2
+
+STATUS CODES
+200 = OK
+401 = UNAUTHORIZED
+403 = FORBIDDEN
+404 = NOT FOUND
+500 = INTERNAL SERVER ERROR
+504 = GATEWAY TIMEOUT
+
+GERALMENTE:
+2XX = Sucesso
+4XX = ERRO NO CLIENTE
+5XX = ERRO SERVER SIDE
+
+REFERÊNCIA
+www.httpstatuses.com
+
+* O que é API
+* Rest / Restful
+* Postman
+
+https://github.com/huguinho-alves/python_aceleracao_everys
+
+

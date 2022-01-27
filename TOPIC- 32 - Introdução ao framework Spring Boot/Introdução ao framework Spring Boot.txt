@@ -1,0 +1,138 @@
+REQUISITOS BÁSICOS
+* Java 8 ou versões superiores
+* Maven 3.5.2 ou versões superiores
+* Intellij IDEA Community Edition ou IDE favorita
+
+PROBLEMAS DO SPRING
+* Configurações de beans em arquivos xml
+* Dispatcher Servlet e view resolver em web.xml
+* Setup manual de banco de dados
+* Muito tempo gasto em configuração
+* Perda de foco em valor
+
+O QUE É SPRING BOOT?
+* Criado pela Spring Source em 2012
+* Facilita setup de projetos Spring
+* Sem necessidade de criar arquivos de configuração
+* Foco maior em produtividade
+* Maior tempo no desenvolvimento de valor
+
+QUAIS PROBLEMAS RESOLVE?
+* Produtividade: setup simplificado de projeto
+* Starter: dependências auto configuráves pelo Spring Boot
+* Execução simplificada: sem deploy em servidor externo
+* Configuração: arquivo externo para configuração
+* Valor: maior tempo em desenvolvimento
+
+CRIAR UM PROJETO SPRING
+1. Entrar no site: https://strat.spring.io
+2. Configurações do projeto
+Project: Maven Project
+Language: Java
+Spring Boot: 2.6.3
+Project Metadata: 
+    - Group: com.digitalinnovationone
+    - Artifact: springboot
+    - Name: springboot
+    - Description: Demo project for Spring Boot
+    - Package name: com.digitalinnovationone.springboot
+    - Packaging: Jar
+    - Java: 11
+Dependencies: Spring Web
+
+GENERATE = irá baixar o novo projeto com as configurações setadas
+
+Abrir no IntelliJ
+Executar edições
+
+COMANDOS
+sudo apt install maven		// instalar o maven
+mvn srping-boot:run			// roda o projeto
+mvn spring-boot:run -Dserver.port=8085	// escolhe uma porta
+mvn clean package			// clean faz a limpeza de todo o projeto e package faz o empacotamento de testes unitarios e todos artefatos
+java -jar springboot.jar		// dentro da pasta target, irá subir a aplicação
+jar tf springboot.jar | less		// tf faz a listagem de todo o conteudo do jar
+
+
+CONFIGURAÇÃO MANUAL
+* múltiplos arquivos xml
+* configuração manual do spring mvc: dispatcher, servlet, web.xml, spring-mvc.xml
+* configuração manual dos beans spring
+* aplicado também ao spring data, spring security, etc
+
+AUTO CONFIGURATION
+* Starter: dependências simplificadas e auto configuráveis
+* Spring Boot detecta as dependências e configura para nós
+* Projeto simplificado e pronto para foco no valor!
+
+EXECUTAR EM MODO DEBUG
+src/main/resources/application.properties
+digitar debug=true
+
+ANTES DO SPRING BOOT
+* Spring tradicional: war precisa de servidor de aplicação
+  - Web Application -> package -> WAR -> Deploy -> Web Server
+* dependência de um container web ou servidor de aplicação
+* complexidade para configurações
+* atualizações frequentes, junto com verssão do projeto
+* gerenciamento manual de configurações
+
+FATJAR/UBERJAR
+* artefato do projeto pronto para execução
+* container web embutido na geração e execução (tomcat)
+* deploy embarcado com outros containers são opcionais
+* dependências principais do projeto embarcado
+  Skinny
+  Thin
+  Fat/Uber
+  Hollow
+* Execução direta através de um único java -jar
+  COMANDO: mvn package && java -jar target/spring-boot-example-0.1.0.jar
+* podemos também gerar o war tradicional
+
+
+
+mvn clean package = gera uma pasta chamada target
+
+PASSOS CONFIG
+1# no arquivo pom.xml, incluir a linha: <packaging>war</packaging> abaixo de <description>...
+2# executar: mvn clean package para limpar o projeto
+3# mv target/springboot.war apache-tomcat-9.0.26/ para mover para o apache
+
+baixar apach-tomcat --
+colocar arquivos na pasta webapps/ROOT
+executar dentro da pasta bin, arquivo ./startup.sh
+
+MULTIPLOS AMBIENTES
+* ambientes para desenvolvimento, teste e produção
+local > development > Staging > production
+* bancos de dados para cada ambiente
+* execução de testes unitários em ambiente local
+* suíte de teste completas em ambiente de teste
+* simulação do ambiente real em staging
+* deploy simplificado em produção
+
+SPRING BOOT PROFILES
+* configurações próprias para cada ambiente
+* ambientes com sua configuração: dev, production
+
+CONFIGURAÇÕES COM YAML
+* troca no formato de configurações: formato .yml
+
+VARIÁVEIS DE AMBIENTE
+* variável de ambiente pode ser injetada através da anotação @Value no projeto
+* linux e Mac: export comum de variável
+  - export ENV_DB_URL=jdbc:h2:mem:db;DB_CLOSE_DELAY=-1
+* windows: padrão de variável de ambiente
+* injeção com anotação @Value({NOME_VARIAVEL})
+* definição de valor default quando não há variável
+  - @Value("${ENV_DB_URL:NENHUMA}")
+  - private String dbEnvironmentVariable;
+
+# injetar a variável com @Value em AppController
+# definição de valor default junto com a anotação @Value
+# criar método para chamada do novo método e exibir o valor
+# executar projeto no terminal e exibir no browser
+
+repo:
+github.com/rpeleias/springbootprofile_digital_innovation_one
