@@ -1,0 +1,1 @@
+Em engenharia de software, CI/CD ou CICD pode se referir às práticas combinadas de integração contínua e entrega contínua. Nesta mentoria um expert da Amdocs irá demonstrar como essas práticas são aplicadas nos projetos desenvolvidos pela empresa.

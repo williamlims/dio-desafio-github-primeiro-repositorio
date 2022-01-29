@@ -1,0 +1,112 @@
+REST
+* REST é um acrônimo de representação de transferência de estado (Representational State Transfer
+* REST é um estilo arquitetural apresentado por Roy Fielding (HTTP e REST)
+* Interoperável e agnóstico a linguagem ou tecnologia (meio de integração entre sistemas de qualquer stack tecnológica)
+
+CONSTRAINTS
+# Interface Uniforme
+   * baseado em recursos, interfaces por onde o cliente se comunica com o servidor
+# Cliente-Servidor
+   * cliente e servidor podem existirem e serem desenvolvidos separadamente, são independentes
+# Sem Estado
+   * o servidor não guarda estado, sessão, necessário sempre, a cada requisição, caso necessário, informar o servidor de quem está requerendo o dado específico
+# Cache
+   * funcionalidade que elimina, dado algumas configurações, voltar ao servidor, se a requisição se repetir dentro de um
+     tempo. Cache pode ser gerenciado em modo client ou server side
+# Sistema em camadas
+   * por ser sem estado, permite distribuir as implantações e ou recursos, ex.: API em um servidor, data storage em outro
+     e sistema de autenticação em um terceiro servidor
+# Código sobre demanda (opcional)
+   * possibilidade de retornar "executáveis" via API para renderização de algum componente se necessário
+
+# RESOURCE NAMING GUIDE
+* estratégia para expor recursos (plural ou singular)
+* estrutura de nomes para recuperar recursos, armazenar, detalhe, nomes compostos, passar parametros (query param, path param)
+* URI (endereçamento para um determinado recurso)
+
+Domain > URI > Query String = URL
+
+# CACHING
+  * capacidade de manter cópias de um response armazenadas por um tempo determinado
+  * elementos:
+      - tempo de expiração
+      - cache-control
+      - E-tag
+      - Last Modified
+  * cuidados
+
+# VERSIONAMENTO
+  * permite evolução de uma API sem trazer quebra de contratos para os clientes (mudanças em requests e responses, remoção de API)
+  * Tipos:
+      - URI: http://api.example.com/v1, http://apiv1.example.com
+      - Header Customizado: Accept-version: v1
+      - Content Negotiation (Accept Header):
+	- Accept: application/vnd.example.v1+json
+	- Accept: application/vnd.example+json;version=1.0
+
+# VERBOS HTTP
+  * GET		// recuperar dados
+  * POST		// salvar dados
+  * PUT		// atualizar tudo
+  * PATCH		// atualização parcial
+  * DELETE	// exclusão
+
+# CÓDIGOS HTTP
+  * 1XX - Informações
+  * 2XX - Sucesso na requisição
+  * 3XX - Redirecionamentos
+  * 4XX - Erro no lado do cliente
+  * 5XX - Erro no lado do servidor
+
+- https://httpstatuses.com
+
+# IDEMPOTÊNCIA
+  * uma requisição é aquela que, independente da quantidade de vezes que se execute, o efeito é o mesmo que da primeira execução
+  * POST - altera estado no servidor, cria recurso, logo, não é idempotente
+  * GET, PUT, DELETE, HEAD, OPTIONS e TRACE são idempotentes
+
+# N+1 em REST APIs
+
+SWAGGER
+* https://swagger.io/resources/articles/adopting-an-api-first-approach
+* https://editor.swagger.io
+
+# PRÉ-REQUISITO
+# ARQUITETURA HEXAGONAL APLICADO AO PROJETO
+   * Application Layer
+      * Configs
+      * Controllers (conceito de fronteira)
+	- DTOs (reques, response)
+	- Bean Validations
+	- init Binders (validação customizadas)
+	- Error Handlers
+      * Domain Layer
+	- Entidades
+	- Portas (interfaces)
+	- Services
+      * Resource Layer
+	- Spring data repository
+	- Proxy repository (composição com spring data repository e implementação interface repository do domínio)
+	- Entidades mapeadas com anotações de acordo com tecnologia de banco de dados escolhida para o projeto
+      * Testes
+      - https://start.spring.io
+      * Dockerização
+	- Script e configuração para criação de imagem
+	- Compose yaml do serviço
+	- Usando o docker-compose para subir o serviço
+      * Heroku
+	- Criando uma app
+	- Conectando com o github do projeto
+	- Automatizando o pipeline de deploy
+
+* Principal objetivo de uso de Clean Architecture é fornecer aos desenvolvedores uma maneira de organizar o código
+  de forma que encapsule a lógica de negócios, mas mantenha-o separado do mecanismo de entrega.
+
+* Vantagens:
+  - independência de interfaces de usuário
+  - independência da stack tecnológica utilizada para acesso aos dados e ou expor entradas
+  - Testável
+  - Carga cognitiva de entendimento do projeto, regras de negócio
+  - Facilita manutenabilidade
+
+
